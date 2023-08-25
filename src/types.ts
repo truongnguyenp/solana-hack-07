@@ -28,3 +28,15 @@ export class XnftWallet implements Wallet {
     return this.#xnftInjection.signAllTransactions(txs);
   }
 }
+
+export interface Team {
+  name: string;
+  logo: any;
+  score: number;
+}
+export interface Game {
+  id: number
+  team1: Team
+  team2: Team
+
+}

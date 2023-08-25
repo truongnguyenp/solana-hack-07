@@ -22,11 +22,7 @@ type RootStackParamList = {
   Detail: { id: string };
 };
 
-interface Team {
-  name: string;
-  logo: any;
-  score: number;
-}
+
 const Stack = createStackNavigator<RootStackParamList>();
 
 function FullScreenLoadingIndicator() {
@@ -105,7 +101,6 @@ function List({
         renderItem={({ item }) => {
           return (
             <TokenRow
-              id={item.id}
               item={item}
               onPress={handlePressTokenRow}
             />

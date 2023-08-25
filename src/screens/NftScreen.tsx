@@ -70,7 +70,7 @@ export function NftScreen() {
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Image source={{ uri: imageUri }} style={tw`w-80 h-80 alignItems: "center" rounded m-4`} />
             </View>
-            <Text style={tw`mb-4`}>
+            <Text style={tw`mb-4 `}>
                 Your solana pubkey: {pk?.toBase58()}
             </Text>
             <Button title="Transfer SOL" onPress={() => transferSol(pk)} />
