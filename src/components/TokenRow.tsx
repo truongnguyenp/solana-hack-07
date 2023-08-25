@@ -1,19 +1,30 @@
 import { Text, Pressable, StyleSheet, Image, View } from "react-native";
 import { Game } from "../types";
+import { Divider } from "@rneui/base";
 
 type Props = {
   game: Game
   onPress: (id: string) => void;
 };
 
-export function TokenRow({game }: Props) {
+export function TokenRow({game, onPress }: Props) {
   return (
-    <Pressable onPress={() => onPress(id)} style={styles.container}>
+    <Pressable onPress={() => onPress?.(game.id)} style={styles.container}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <Image source={{ uri: game.team1.logo }} style={styles.image} />
         <Text style={styles.name}>{game.team1.name}</Text>
       </View>
-      <Text style={styles.price}>${game.team1.score}</Text>
+
+      <View style={{ flexDirection: "row", alignItems: "center", gap: "4px" }}>
+      <Text style={styles.score}>{game.team1.score}</Text>
+      <Divider orientation="vertical" width={5} />
+      <Text style={styles.score}>{game.team2.score}</Text>
+      </View>
+
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <Image source={{ uri: game.team2.logo }} style={styles.image} />
+        <Text style={styles.name}>{game.team2.name}</Text>
+      </View>
     </Pressable>
   );
 }
@@ -23,6 +34,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    borderBottomWidth: 1,
+    backgroundColor: '#D6FFE5',
+    borderColor: "#E0E0E0",
   },
   image: {
     width: 44,
@@ -34,7 +50,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "500",
   },
-  price: {
+  score: {
     fontSize: 18,
+  },
+  divider: {
+    width: 1,
+    height: 16,
+    backgroundColor: "#E0E0E0",
+    marginHorizontal: 12,
   },
 });

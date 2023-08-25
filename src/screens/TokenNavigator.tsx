@@ -16,6 +16,7 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { Screen } from "../components/Screen";
 import { TokenRow } from "../components/TokenRow";
+import { Game } from "../types";
 
 type RootStackParamList = {
   List: {};
@@ -37,7 +38,7 @@ async function fetchTokenData(count = 20) {
   const games = [
     {
       id: 1,
-      team1:{
+      team1: {
         name: 'SKT',
         logo: require('../../assets/teamLogo/SKT.png'),
         score: 2,
@@ -46,10 +47,88 @@ async function fetchTokenData(count = 20) {
         name: 'IG',
         logo: require('../../assets/teamLogo/IG.png'),
         score: 1,
-      }
+      },
     },
-    // Add more game objects here
+    {
+      id: 2,
+      team1: {
+        name: 'FNC',
+        logo: require('../../assets/teamLogo/FNC.png'),
+        score: 3,
+      },
+      team2: {
+        name: 'TL',
+        logo: require('../../assets/teamLogo/TL.png'),
+        score: 2,
+      },
+    },
+    {
+      id: 3,
+      team1: {
+        name: 'G2',
+        logo: require('../../assets/teamLogo/G2.png'),
+        score: 0,
+      },
+      team2: {
+        name: 'DWG',
+        logo: require('../../assets/teamLogo/DWG.png'),
+        score: 2,
+      },
+    },
+    {
+      id: 4,
+      team1: {
+        name: 'RNG',
+        logo: require('../../assets/teamLogo/RNG.png'),
+        score: 1,
+      },
+      team2: {
+        name: 'TL',
+        logo: require('../../assets/teamLogo/C9.png'),
+        score: 2,
+      },
+    },
+    {
+      id: 5,
+      team1: {
+        name: 'C9',
+        logo: require('../../assets/teamLogo/C9.png'),
+        score: 1,
+      },
+      team2: {
+        name: 'SKT',
+        logo: require('../../assets/teamLogo/SKT.png'),
+        score: 2,
+      },
+    },
+    {
+      id: 5,
+      team1: {
+        name: 'IG',
+        logo: require('../../assets/teamLogo/IG.png'),
+        score: 1,
+      },
+      team2: {
+        name: 'TL',
+        logo: require('../../assets/teamLogo/TL.png'),
+        score: 2,
+      },
+    },
+    {
+      id: 2,
+      team1: {
+        name: 'FNC',
+        logo: require('../../assets/teamLogo/FNC.png'),
+        score: 3,
+      },
+      team2: {
+        name: 'G2',
+        logo: require('../../assets/teamLogo/G2.png'),
+        score: 2,
+      },
+    },
   ];
+  
   return  games;
 }
 
@@ -94,6 +173,7 @@ function List({
   return (
     <Screen>
       <FlatList
+      showsHorizontalScrollIndicator={false}
         style={{ flex: 1 }}
         data={data}
         keyExtractor={(item) => item.id}
@@ -101,7 +181,7 @@ function List({
         renderItem={({ item }) => {
           return (
             <TokenRow
-              item={item}
+              game={item}
               onPress={handlePressTokenRow}
             />
           );

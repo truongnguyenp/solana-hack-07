@@ -15,6 +15,7 @@ import XnftContextProvider, {
   useXnft,
 } from './provider/XnftProvider';
 import tw from 'twrnc';
+import { useTheme } from './hooks/useTheme';
 
 const Tab = createBottomTabNavigator();
 
@@ -99,11 +100,13 @@ function App() {
       </View>
     );
   }
-
+  const {custom} = useTheme();
   return (
     <XnftContextProvider>
       <RecoilRoot>
-        <NavigationContainer>
+        <NavigationContainer
+        theme={custom}
+        >
           <TabNavigator />
         </NavigationContainer>
       </RecoilRoot>

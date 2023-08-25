@@ -35,7 +35,7 @@ export interface Team {
   score: number;
 }
 export interface Game {
-  id: number
+  id: string
   team1: Team
   team2: Team
 
