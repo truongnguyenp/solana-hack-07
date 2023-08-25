@@ -100,12 +100,10 @@ function App() {
       </View>
     );
   }
-  const {custom} = useTheme();
   return (
     <XnftContextProvider>
       <RecoilRoot>
         <NavigationContainer
-        theme={custom}
         >
           <TabNavigator />
         </NavigationContainer>
