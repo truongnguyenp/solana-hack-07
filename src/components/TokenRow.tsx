@@ -14,7 +14,7 @@ export function TokenRow({game, onPress }: Props) {
   return (
     <Pressable onPress={() => onPress?.(game.id)} style={styles.container}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Image source={{ uri: imageUrl }} style={styles.image} />
+        <Image source={{ uri: game.team1.logo }} style={styles.image} />
         <Text style={styles.name}>{name}</Text>
       </View>
 
