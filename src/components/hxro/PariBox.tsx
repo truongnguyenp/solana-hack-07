@@ -9,6 +9,7 @@ import {
 import { useEffect } from "react";
 // import PlacePositionBox from './PlacePositionBox'
 import { PariConfig } from "./Config";
+import PlacePositionBox from "./PlacePositionBox";
 
 interface PariObj {
     longPool: any;
@@ -139,7 +140,6 @@ export const PariBox: FC<{ time: string }> = (props) => {
                 boxSizing: "border-box",
                 alignItems: "center",
             }}>
-                <h1 style={{fontWeight: 'bold', fontSize:'30px'}}>{timeTitle}</h1>
                 <view
                     style={{
                         display: "flex",
@@ -186,9 +186,9 @@ export const PariBox: FC<{ time: string }> = (props) => {
                         <p style={{ fontWeight: "bold" }}>{countDownTime}</p>
                     </view>
                 </view>
-                {/* <view style={{marginTop:'20px'}}>
+                <view style={{marginTop:'20px'}}>
                    <PlacePositionBox pubkey={pariObj? pariObj.pubkey : 'Loading'}/>
-                </view> */}
+                </view>
             </view>
         </view>
     );
