@@ -3,10 +3,7 @@ import { Game } from "../types";
 import { Divider } from "@rneui/base";
 
 type Props = {
-  id: string;
-  name: string;
-  price: string;
-  imageUrl: string;
+ game: Game;
   onPress: (id: string) => void;
 };
 
@@ -15,7 +12,7 @@ export function GameRow({game, onPress }: Props) {
     <Pressable onPress={() => onPress?.(game.id)} style={styles.container}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <Image source={{ uri: game.team1.logo }} style={styles.image} />
-        <Text style={styles.name}>{name}</Text>
+        <Text style={styles.name}>{game.team1.name}</Text>
       </View>
 
       <View style={{ flexDirection: "row", alignItems: "center", gap: "4px" }}>

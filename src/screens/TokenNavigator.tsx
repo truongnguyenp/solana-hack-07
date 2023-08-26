@@ -15,7 +15,7 @@ import {
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { Screen } from "../components/Screen";
-import { GameRow } from "../components/GameRow";
+import { GameRow } from "../components/GameRow"
 import { Game } from "../types";
 
 type RootStackParamList = {
@@ -38,10 +38,10 @@ function FullScreenLoadingIndicator() {
   );
 }
 
-async function fetchTokenData(count = 20) {
-  const games = [
+async function fetchTokenData(count = 20): Promise<Game[]> {
+  const games: Game[] = [
     {
-      id: 1,
+      id: "1",
       team1: {
         name: 'SKT',
         logo: require('../../assets/teamLogo/SKT.png'),
@@ -54,7 +54,7 @@ async function fetchTokenData(count = 20) {
       },
     },
     {
-      id: 2,
+      id: "2",
       team1: {
         name: 'FNC',
         logo: require('../../assets/teamLogo/FNC.png'),
@@ -67,7 +67,7 @@ async function fetchTokenData(count = 20) {
       },
     },
     {
-      id: 3,
+      id: "3",
       team1: {
         name: 'G2',
         logo: require('../../assets/teamLogo/G2.png'),
@@ -80,7 +80,7 @@ async function fetchTokenData(count = 20) {
       },
     },
     {
-      id: 4,
+      id: "4",
       team1: {
         name: 'RNG',
         logo: require('../../assets/teamLogo/RNG.png'),
@@ -93,7 +93,7 @@ async function fetchTokenData(count = 20) {
       },
     },
     {
-      id: 5,
+      id: "5",
       team1: {
         name: 'C9',
         logo: require('../../assets/teamLogo/C9.png'),
@@ -106,7 +106,7 @@ async function fetchTokenData(count = 20) {
       },
     },
     {
-      id: 5,
+      id: "5",
       team1: {
         name: 'IG',
         logo: require('../../assets/teamLogo/IG.png'),
@@ -119,7 +119,7 @@ async function fetchTokenData(count = 20) {
       },
     },
     {
-      id: 2,
+      id: "2",
       team1: {
         name: 'FNC',
         logo: require('../../assets/teamLogo/FNC.png'),
@@ -214,13 +214,13 @@ function Detail({
   return (
     <Screen>
       <View style={tw`bg-yellow-100 items-center justify-center p-4`}>
-        <Image source={{ uri: item.image }} style={tw`w-8 h-8 rounded m-4`} />
-        <Text style={tw`font-bold text-lg`}>{item.name}</Text>
-        <Text style={tw`font-bold text-lg`}>Symbol: {item.symbol}</Text>
+        <Image source={{ uri: item.team1.logo }} style={tw`w-8 h-8 rounded m-4`} />
+        <Text style={tw`font-bold text-lg`}>{item.team1.name}</Text>
+        <Text style={tw`font-bold text-lg`}>Symbol: {item.id}</Text>
         <Text style={tw`font-bold text-lg`}>
-          Total supply: {item.total_supply}
+          Total supply: {item.team1.name}
         </Text>
-        <Text style={tw`font-bold text-lg`}>All time high: {item.ath}</Text>
+        <Text style={tw`font-bold text-lg`}>All time high: {item.id}</Text>
       </View>
     </Screen>
   );

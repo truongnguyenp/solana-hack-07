@@ -14,6 +14,7 @@ import { View } from 'react-native';
 import { Button } from '@rneui/base';
 import tw from 'twrnc';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { notify } from '../../utils/notifications';
 
 const privateKey = new Uint8Array([
 	70, 224, 61, 154, 54, 252, 229, 243, 14, 140, 229, 12, 152, 220, 123, 254,
@@ -62,8 +63,8 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 				side,
 				Date.now()
 			);
-
-			console.log(txHash); //TODO: handle notification success
+			console.log("v");
+			!txHash && notify({ message: 'Transaction sent', txid: txHash });
 		};
       
     const bgGradientClass =
