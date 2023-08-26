@@ -13,6 +13,7 @@ import {
 import { View } from 'react-native';
 import { Button } from '@rneui/base';
 import tw from 'twrnc';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const privateKey = new Uint8Array([
 	70, 224, 61, 154, 54, 252, 229, 243, 14, 140, 229, 12, 152, 220, 123, 254,
