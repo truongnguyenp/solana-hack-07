@@ -39,6 +39,100 @@ function FullScreenLoadingIndicator() {
 }
 
 async function fetchTokenData(count = 20): Promise<Game[]> {
+  // const games = [
+  //   {
+  //     id: 1,
+  //     team1: {
+  //       name: 'SKT',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //     team2: {
+  //       name: 'IG',
+  //       logo: require('../../assets/teamLogo/IG.png'),
+  //       score: 1,
+  //     },
+  //   },
+  //   {
+  //     id: 2,
+  //     team1: {
+  //       name: 'FNC',
+  //       logo: require('../../assets/teamLogo/FNC.png'),
+  //       score: 3,
+  //     },
+  //     team2: {
+  //       name: 'TL',
+  //       logo: require('../../assets/teamLogo/TL.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: 3,
+  //     team1: {
+  //       name: 'G2',
+  //       logo: require('../../assets/teamLogo/G2.png'),
+  //       score: 0,
+  //     },
+  //     team2: {
+  //       name: 'DWG',
+  //       logo: require('../../assets/teamLogo/DWG.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: 4,
+  //     team1: {
+  //       name: 'RNG',
+  //       logo: require('../../assets/teamLogo/RNG.png'),
+  //       score: 1,
+  //     },
+  //     team2: {
+  //       name: 'TL',
+  //       logo: require('../../assets/teamLogo/C9.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: 5,
+  //     team1: {
+  //       name: 'C9',
+  //       logo: require('../../assets/teamLogo/C9.png'),
+  //       score: 1,
+  //     },
+  //     team2: {
+  //       name: 'SKT',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: 5,
+  //     team1: {
+  //       name: 'IG',
+  //       logo: require('../../assets/teamLogo/IG.png'),
+  //       score: 1,
+  //     },
+  //     team2: {
+  //       name: 'TL',
+  //       logo: require('../../assets/teamLogo/TL.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: 2,
+  //     team1: {
+  //       name: 'FNC',
+  //       logo: require('../../assets/teamLogo/FNC.png'),
+  //       score: 3,
+  //     },
+  //     team2: {
+  //       name: 'G2',
+  //       logo: require('../../assets/teamLogo/G2.png'),
+  //       score: 2,
+  //     },
+  //   },
+  // ];
+  
   const games: Game[] = [
     {
       id: "1",
@@ -49,7 +143,7 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       },
       team2: {
         name: 'IG',
-        logo: require('../../assets/teamLogo/IG.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 1,
       },
     },
@@ -57,12 +151,12 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       id: "2",
       team1: {
         name: 'FNC',
-        logo: require('../../assets/teamLogo/FNC.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 3,
       },
       team2: {
         name: 'TL',
-        logo: require('../../assets/teamLogo/TL.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 2,
       },
     },
@@ -70,12 +164,12 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       id: "3",
       team1: {
         name: 'G2',
-        logo: require('../../assets/teamLogo/G2.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 0,
       },
       team2: {
         name: 'DWG',
-        logo: require('../../assets/teamLogo/DWG.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 2,
       },
     },
@@ -83,12 +177,12 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       id: "4",
       team1: {
         name: 'RNG',
-        logo: require('../../assets/teamLogo/RNG.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 1,
       },
       team2: {
         name: 'TL',
-        logo: require('../../assets/teamLogo/C9.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 2,
       },
     },
@@ -96,7 +190,7 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       id: "5",
       team1: {
         name: 'C9',
-        logo: require('../../assets/teamLogo/C9.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 1,
       },
       team2: {
@@ -109,12 +203,12 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       id: "5",
       team1: {
         name: 'IG',
-        logo: require('../../assets/teamLogo/IG.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 1,
       },
       team2: {
         name: 'TL',
-        logo: require('../../assets/teamLogo/TL.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 2,
       },
     },
@@ -122,17 +216,17 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       id: "2",
       team1: {
         name: 'FNC',
-        logo: require('../../assets/teamLogo/FNC.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 3,
       },
       team2: {
         name: 'G2',
-        logo: require('../../assets/teamLogo/G2.png'),
+        logo: require('../../assets/teamLogo/SKT.png'),
         score: 2,
       },
     },
   ];
-  
+
   return  games;
 }
 
@@ -170,23 +264,27 @@ function List({
 
   const ItemSeparatorComponent = () => (
     <View
-      style={{ marginVertical: 8, borderColor: "#eee", borderBottomWidth: 1 }}
+      style={{ marginVertical: 8,}}
     />
   );
 
   return (
-    <Screen>
+    <Screen
+      style={{backgroundColor: "#161723"}}
+    >
       <FlatList
       showsHorizontalScrollIndicator={false}
-        style={{ flex: 1 }}
+        style={{ flex: 1}}
         data={data}
         keyExtractor={(item) => item.id}
         ItemSeparatorComponent={ItemSeparatorComponent}
+
         renderItem={({ item }) => {
           return (
             <GameRow
               game={item}
               onPress={handlePressGameRow}
+              style={{marginBottom: "30px"}}
             />
           );
         }}
@@ -280,11 +378,22 @@ export const TokenListNavigator = () => {
       <Stack.Screen
         name="List"
         component={List}
-        options={{ title: "Game List" }}
+        options={{ 
+          title: "Battles",
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+        }}
       />
+
       <Stack.Screen
         name="Detail"
         component={Detail}
+       
         options={{ title: "Token Detail" }}
       />
     </Stack.Navigator>

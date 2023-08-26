@@ -18,7 +18,7 @@ const darkTheme: Theme= {
     background: 'rgb(242, 242, 242)',
     card: 'rgb(255, 255, 255)',
     text: 'rgb(28, 28, 30)',
-    border: 'rgb(199, 199, 204)',
+    border: 'rgb(199, 19.9, 204)',
     notification: 'rgb(255, 69, 58)',
   },
 };
