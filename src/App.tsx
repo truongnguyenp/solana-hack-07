@@ -96,28 +96,6 @@ function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Examples"
-        component={PredictingScreens}
-        options={{
-          tabBarLabel: 'Examples',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
-          ),
-          headerStyle: {
-            backgroundColor: "#161723",
-          },
-
-          headerTitleStyle: {
-            color: "white",
-            // Add other title style properties as needed
-          },
-          tabBarStyle: {
-            backgroundColor: '#161723',
-            // Other tabBar style properties
-          },
-        }}
-      />
-      <Tab.Screen
         name="NFT"
         component={NftScreen}
         options={{
