@@ -7,7 +7,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFonts, Inter_900Black } from '@expo-google-fonts/dev';
 
 import { PredictingScreens } from './screens/PredictingScreen';
-import { HomeScreen } from './screens/HomeScreen';
+import { HomeScreen, TokenInfoChartNavigator } from './screens/HomeNavigator';
 import { ChartEsportcast } from './screens/ChartEsportcast'
 import { TokenListNavigator } from './screens/TokenNavigator';
 import { NftScreen } from './screens/NftScreen';
@@ -30,9 +30,8 @@ function TabNavigator() {
     >
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={TokenInfoChartNavigator}
         options={{
-          tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),

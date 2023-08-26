@@ -17,10 +17,10 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Screen } from "../components/Screen";
 import { GameRow } from "../components/GameRow"
 import { Game } from "../types";
-import { HomeScreen } from "./HomeScreen";
+import { HomeScreen } from "./HomeNavigator";
 import { PredictingScreens } from "./PredictingScreen";
 
-type RootStackParamList = {
+export type RootStackParamList = {
   List: {};
   Detail?: { id: string };
 };

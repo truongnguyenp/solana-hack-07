@@ -4,12 +4,18 @@ import tw from "twrnc";
 import { Screen } from "../components/Screen";
 import React, { useEffect, useState } from "react";
 import { TokenInfo } from "../types";
-import { ItemSeparatorComponent, forSlide } from './TokenNavigator'
+import { ItemSeparatorComponent, RootStackParamList, forSlide } from './TokenNavigator'
 import { TokenCardInfo } from "../components/TokeInfoCard";
 import { Stack } from './TokenNavigator'
 import { ChartEsportcast } from "./ChartEsportcast";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-export function HomeScreen() {
+export function HomeScreen({ navigation }: NativeStackScreenProps<RootStackParamList,"List">) {
+  const handlePressTokenRow = (id: string) => {
+    navigation.push("Detail", { id });
+    console.log('id', id);
+    
+  };
   const listFakeTokensAddress = [
     'DK64rmGSZupv1dLYn57e3pUVgs9jL9EKLXDVZZPsMDz8',
     'FXdxsZhNYGSBdne2LZ448SJ1QDXk8KaEzvKivCvc38h3',
@@ -113,6 +119,7 @@ export function HomeScreen() {
         renderItem={({ item }) => {
           return (
             <TokenCardInfo 
+              onPress={() => handlePressTokenRow(item.address)}
               tokenInfo={item}
             />
           );
@@ -131,18 +138,8 @@ export function TokenInfoChartNavigator() {
       }}
     >
       <Stack.Screen
-        name="tokenInfoList"
+        name="List"
         component={HomeScreen}
-        options={{ 
-          title: "Battles",
-          headerStyle: {
-            backgroundColor: "#161723",
-          },
-          headerTitleStyle: {
-            color: "white",
-            // Add other title style properties as needed
-          },
-        }}
       />
 
       <Stack.Screen
