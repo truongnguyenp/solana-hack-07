@@ -18,7 +18,7 @@ import { Screen } from "../components/Screen";
 import { GameRow } from "../components/GameRow"
 import { Game } from "../types";
 import { HomeScreen } from "./HomeScreen";
-import { ExamplesScreens } from "./ExamplesScreen";
+import { PredictingScreens } from "./PredictingScreen";
 
 type RootStackParamList = {
   List: {};
@@ -396,7 +396,7 @@ export const TokenListNavigator = () => {
 
       <Stack.Screen
         name="Detail"
-        component={ExamplesScreens}
+        component={PredictingScreens}
        
         options={{ title: "Predicting game detail",   headerStyle: {
           backgroundColor: "#161723",
