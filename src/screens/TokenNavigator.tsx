@@ -22,7 +22,7 @@ import { ExamplesScreens } from "./ExamplesScreen";
 
 type RootStackParamList = {
   List: {};
-  Detail: { id: string };
+  Detail?: { id: string };
 };
 
 interface Team {
@@ -30,7 +30,7 @@ interface Team {
   logo: any;
   score: number;
 }
-const Stack = createStackNavigator<RootStackParamList>();
+export const Stack = createStackNavigator<RootStackParamList>();
 
 function FullScreenLoadingIndicator() {
   return (
@@ -328,7 +328,7 @@ function Detail({
   );
 }
 
-const forSlide: StackCardStyleInterpolator = ({
+export const forSlide: StackCardStyleInterpolator = ({
   current,
   next,
   inverted,
