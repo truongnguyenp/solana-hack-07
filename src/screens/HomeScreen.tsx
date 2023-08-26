@@ -1,24 +1,13 @@
-import { Text, FlatList, View } from "react-native";
+import { Text, View, FlatList } from "react-native";
 import tw from "twrnc";
 
 import { Screen } from "../components/Screen";
 import React, { useEffect, useState } from "react";
 import { TokenInfo } from "../types";
+import { ItemSeparatorComponent } from './TokenNavigator'
+import { TokenCardInfo } from "../components/TokeInfoCard";
 
 export function HomeScreen() {
-  const features = [
-    "tailwind",
-    "recoil",
-    "native styling",
-    "fetching code from an API",
-    "using a FlatList to render data",
-    "Image for both remote & local images",
-    "custom fonts",
-    "sign a transaction / message",
-    "theme hook with light/dark support",
-  ];
-
-
   const listFakeTokensAddress = [
     'DK64rmGSZupv1dLYn57e3pUVgs9jL9EKLXDVZZPsMDz8',
     'FXdxsZhNYGSBdne2LZ448SJ1QDXk8KaEzvKivCvc38h3',
@@ -65,7 +54,7 @@ export function HomeScreen() {
     }
   }
 
-  const [listTokenInfo, setListTokenInfo] = useState<TokenInfo[]>()
+  const [listTokenInfo, setListTokenInfo] = useState<TokenInfo[]>([])
 
   const filterFakeTokenByAddress = (tokens: TokenInfo[]) => {
     const listTokensBetting = tokens.filter(token => listFakeTokensAddress.includes(token.address))
@@ -96,14 +85,21 @@ export function HomeScreen() {
     <Screen>
       <Text style={tw`mb-4`}>List token information for betting</Text>
 
-      {listTokenInfo && listTokenInfo.map(tokenInfo => (
-        <View key={tokenInfo.address} style={tw`bg-white rounded-lg shadow-md p-4 mb-4`}>
-          <Text style={tw`text-xl font-semibold`}>Token Data:</Text>
-          <Text style={tw`text-lg`}>Name: {tokenInfo.name}</Text>
-          <Text style={tw`text-lg`}>Symbol: {tokenInfo.symbol}</Text>
-          <Text style={tw`text-lg`}>Address: {tokenInfo.address}</Text>
-        </View>
-      ))}
+      <FlatList
+        showsHorizontalScrollIndicator={false}
+        style={{ flex: 1 }}
+        data={listTokenInfo}
+        keyExtractor={(item) => item.address}
+        ItemSeparatorComponent={ItemSeparatorComponent}
+
+        renderItem={({ item }) => {
+          return (
+            <TokenCardInfo 
+              tokenInfo={item}
+            />
+          );
+        }}
+      />
     </Screen>
   );
 }

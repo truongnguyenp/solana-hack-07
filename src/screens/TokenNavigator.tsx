@@ -251,6 +251,12 @@ function useTokenData() {
   return { data, loading };
 }
 
+export const ItemSeparatorComponent = () => (
+  <View
+    style={{ marginVertical: 8,}}
+  />
+);
+
 function List({
   navigation,
 }: NativeStackScreenProps<RootStackParamList, "List">) {
@@ -264,11 +270,7 @@ function List({
     return <FullScreenLoadingIndicator />;
   }
 
-  const ItemSeparatorComponent = () => (
-    <View
-      style={{ marginVertical: 8,}}
-    />
-  );
+  
 
   return (
     <Screen
