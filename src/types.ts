@@ -1,12 +1,21 @@
 import { Wallet } from "@coral-xyz/anchor/dist/cjs/provider";
-import { Connection, PublicKey, Transaction, VersionedTransaction } from "@solana/web3.js";
+import {
+  Connection,
+  PublicKey,
+  Transaction,
+  VersionedTransaction,
+} from "@solana/web3.js";
 
 // Only properties necessary to create Wallet have been included. Others exist
 export interface SolanaXnftInjection {
   connection: Connection;
   publicKey: PublicKey;
-  signTransaction<T extends Transaction | VersionedTransaction>(tx: T): Promise<T>;
-  signAllTransactions<T extends Transaction | VersionedTransaction>(txs: T[]): Promise<T[]>;
+  signTransaction<T extends Transaction | VersionedTransaction>(
+    tx: T
+  ): Promise<T>;
+  signAllTransactions<T extends Transaction | VersionedTransaction>(
+    txs: T[]
+  ): Promise<T[]>;
 }
 
 export class XnftWallet implements Wallet {
@@ -20,11 +29,15 @@ export class XnftWallet implements Wallet {
     return this.#xnftInjection.publicKey;
   }
 
-  signTransaction<T extends Transaction | VersionedTransaction>(tx: T): Promise<T> {
+  signTransaction<T extends Transaction | VersionedTransaction>(
+    tx: T
+  ): Promise<T> {
     return this.#xnftInjection.signTransaction(tx);
   }
 
-  signAllTransactions<T extends Transaction | VersionedTransaction>(txs: T[]): Promise<T[]> {
+  signAllTransactions<T extends Transaction | VersionedTransaction>(
+    txs: T[]
+  ): Promise<T[]> {
     return this.#xnftInjection.signAllTransactions(txs);
   }
 }
@@ -35,8 +48,16 @@ export interface Team {
   score: number;
 }
 export interface Game {
-  id: string
-  team1: Team
-  team2: Team
+  id: string;
+  team1: Team;
+  team2: Team;
+}
 
+export interface TokenInfo {
+  networkId: string;
+  address: string;
+  decimals: number;
+  name: string;
+  symbol: string;
+  logoURI: string;
 }
