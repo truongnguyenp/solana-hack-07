@@ -8,6 +8,7 @@ import { useFonts, Inter_900Black } from '@expo-google-fonts/dev';
 
 import { ExamplesScreens } from './screens/ExamplesScreen';
 import { HomeScreen } from './screens/HomeScreen';
+import { ChartEsportcast } from './screens/ChartEsportcast'
 import { TokenListNavigator } from './screens/TokenNavigator';
 import { NftScreen } from './screens/NftScreen';
 import XnftContextProvider, {
@@ -47,7 +48,27 @@ function TabNavigator() {
             // Other tabBar style properties
           },
         }}
-       
+      />
+      <Tab.Screen
+        name="Chart Esport Forecast"
+        component={ChartEsportcast}
+        options={{
+          tabBarLabel: 'Chart Esport Forecast',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account" color={color} size={size} />
+          ),
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+          tabBarStyle: {
+            backgroundColor: '#161723',
+            // Other tabBar style properties
+          },
+        }}
       />
       <Tab.Screen
         name="List"
@@ -63,7 +84,7 @@ function TabNavigator() {
           },
           headerTitleStyle: {
             color: "white",
-        
+
             borderBottomWidth: 0,
           },
           tabBarStyle: {
@@ -84,7 +105,7 @@ function TabNavigator() {
           headerStyle: {
             backgroundColor: "#161723",
           },
-     
+
           headerTitleStyle: {
             color: "white",
             // Add other title style properties as needed
@@ -95,35 +116,35 @@ function TabNavigator() {
           },
         }}
       />
-        <Tab.Screen
-          name="NFT"
-          component={NftScreen}
-          options={{
-            tabBarLabel: 'NFT',
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="map" color={color} size={size} />
-            ),
-            headerStyle: {
-              backgroundColor: "#161723",
-            },
-            headerTitleStyle: {
-              color: "white",
-              // Add other title style properties as needed
-            },
-            tabBarStyle: {
-              backgroundColor: '#161723',
-              // Other tabBar style properties
-            },
-            tabBarLabelStyle: {
-              fontSize: 14,
-              // Other tabBarLabel style properties
-            },
-            tabBarIconStyle: {
-              // Styling for tabBarIcon
-            },
-          }}
-        />
-      </Tab.Navigator>
+      <Tab.Screen
+        name="NFT"
+        component={NftScreen}
+        options={{
+          tabBarLabel: 'NFT',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="map" color={color} size={size} />
+          ),
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+          tabBarStyle: {
+            backgroundColor: '#161723',
+            // Other tabBar style properties
+          },
+          tabBarLabelStyle: {
+            fontSize: 14,
+            // Other tabBarLabel style properties
+          },
+          tabBarIconStyle: {
+            // Styling for tabBarIcon
+          },
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 function Iframe() {
@@ -158,9 +179,8 @@ function App() {
   return (
     <XnftContextProvider>
       <RecoilRoot>
-        <NavigationContainer
-        >
-          <TabNavigator 
+        <NavigationContainer>
+          <TabNavigator
           ></TabNavigator>
         </NavigationContainer>
       </RecoilRoot>
