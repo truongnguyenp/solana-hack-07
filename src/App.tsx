@@ -48,7 +48,7 @@ function TabNavigator() {
           },
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Chart Esport Forecast"
         component={ChartEsportcast}
         options={{
@@ -68,7 +68,7 @@ function TabNavigator() {
             // Other tabBar style properties
           },
         }}
-      />
+      /> */}
       <Tab.Screen
         name="List"
         component={TokenListNavigator}

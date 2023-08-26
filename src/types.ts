@@ -61,3 +61,9 @@ export interface TokenInfo {
   symbol: string;
   logoURI: string;
 }
+
+export interface DataNavigateToChart {
+  name: string,
+  tokenUsage: number[],
+  totalUserBetting: number[]
+}
