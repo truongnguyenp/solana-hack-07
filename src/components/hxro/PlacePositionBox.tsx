@@ -29,20 +29,39 @@ const PlacePositionBox: FC<{ pubkey: string }> = (props) => {
     };
     
     return (
-        <view style={{ textAlign: 'center', gap: "4" }}>
-            <Input
-                type="number"
-                value={inputValue}
-                onChange={handleChange}
-                placeholder={"Enter Amount..."}
-                style={{ color: 'white'   ,Radius: '10px', display: 'inline-block', textAlign: 'center', border: "black"}}
-            />
-            <view style={{ marginLeft: '-15px', marginTop: '10px' }}>
-                <PlacePosition amount={amount} pariPubkey={pubkey} side={PositionSideEnum.LONG}/>
-                <PlacePosition amount={amount} pariPubkey={pubkey} side={PositionSideEnum.SHORT} />
-            </view>
-        </view>
-    );
+			<view style={{ textAlign: 'center', gap: '4' }}>
+				<view>
+					<Input
+						type="number"
+						value={inputValue}
+						onChange={handleChange}
+						placeholder={'Enter Amount...'}
+						style={{
+							color: 'white',
+							Radius: '10px',
+							display: 'inline-block',
+							textAlign: 'center',
+							border: 'black',
+							marginTop: '20px',
+						}}
+					/>
+				</view>
+				<view style={{ marginLeft: '-15px', marginTop: '10px' }}>
+					<PlacePosition
+						amount={amount}
+						pariPubkey={pubkey}
+						side={PositionSideEnum.LONG}
+					/>
+				</view>
+				<view style={{ marginLeft: '-15px', marginTop: '10px' }}>
+					<PlacePosition
+						amount={amount}
+						pariPubkey={pubkey}
+						side={PositionSideEnum.SHORT}
+					/>
+				</view>
+			</view>
+		);
 };
 
 export default PlacePositionBox;

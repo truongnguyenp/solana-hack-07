@@ -10,11 +10,12 @@ import {
   MarketPairEnum,
   getMarketPubkeys,
 } from '@hxronetwork/parimutuelsdk';
-import { View } from 'react-native';
+import { Linking, View } from 'react-native';
 import { Button, Text } from '@rneui/base';
 import tw from 'twrnc';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { notify, showSuccessMessage } from '../../utils/notifications';
+import React, { useState } from 'react';
+import { Alert, Modal, StyleSheet, Pressable } from 'react-native';
+
 const privateKey = new Uint8Array([
 	70, 224, 61, 154, 54, 252, 229, 243, 14, 140, 229, 12, 152, 220, 123, 254,
 	160, 164, 44, 131, 155, 20, 10, 108, 71, 159, 52, 200, 0, 195, 70, 196, 55,
@@ -42,6 +43,10 @@ const usdcDec = 100_000_00;
 const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: string}> = (props) => {
     const { side, amount} = props
 
+    const [txHash, setTxHash] = useState('');
+
+    const [modalVisible, setModalVisible] = useState(false);
+
     const placePosition = async () => {
 			const parimutuels = await parimutuelWeb3.getParimutuels(selectedMarket);
 
@@ -55,7 +60,7 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 			const contestPubkey = pariContest[0].pubkey;
 			
 
-			const txHash = await parimutuelWeb3.placePosition(
+			await parimutuelWeb3.placePosition(
 				keypair as Keypair,
 				contestPubkey,
 				Number(amount) * usdcDec,
@@ -63,8 +68,9 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 				Date.now()
 			).then(
 				(res) => {
-					showSuccessMessage()
-					console.log("ok")
+          setTxHash(res);
+          console.log('txHash: ', res);
+          setModalVisible(!modalVisible);
 				}
 			)
 		};
@@ -76,22 +82,107 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 
 
     return (
-			<View style={{ borderRadius: 80 }}>
+			<View style={{ width: 360, height: 60 }}>
 				<Button
 					title={side === PositionSideEnum.LONG ? 'Win' : 'Lose'}
 					color={side === PositionSideEnum.LONG ? 'blue' : 'red'}
 					onPress={() => placePosition()}
+					style={{ borderRadius: 120 }}
 				>
 					<View
-						style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
+						style={tw`group rounded-full w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
 					>
-					
-						<Text style={tw`block text-white`}>	team A win</Text>
-						<Text style={tw`block group-disabled:hidden text-white`}>{amount} USDC</Text>
+						<Text style={tw`block text-white`}>
+							{side === PositionSideEnum.LONG ? 'SKT Win' : 'SKT Lose'}
+						</Text>
+						<Text style={tw`block group-disabled:hidden text-white`}>
+							{amount} USDC
+						</Text>
 					</View>
 				</Button>
+
+				<View style={styles.centeredView}>
+					<Modal
+						animationType="slide"
+						transparent={true}
+						visible={modalVisible}
+						onRequestClose={() => {
+							Alert.alert('Modal has been closed.');
+							setModalVisible(!modalVisible);
+						}}
+					>
+						<View style={styles.centeredView}>
+							<View style={styles.modalView}>
+								<Text style={styles.modalText}>
+									{'Transaction Successful! '}
+									<Text
+										style={{ color: 'blue' }}
+										onPress={() =>
+											Linking.openURL(
+												`https://explorer.solana.com/tx/${txHash}?cluster=devnet`
+											)
+										}
+									>
+										click me 👈
+									</Text>
+								</Text>
+								<Pressable
+									style={[styles.button, styles.buttonClose]}
+									onPress={() => setModalVisible(!modalVisible)}
+								>
+									<Text style={styles.textStyle}>Yep!</Text>
+								</Pressable>
+							</View>
+						</View>
+					</Modal>
+				</View>
 			</View>
 		);
 };
+
+const styles = StyleSheet.create({
+	centeredView: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginTop: 22,
+	},
+	modalView: {
+		margin: 20,
+		backgroundColor: 'white',
+		borderRadius: 20,
+		padding: 35,
+		alignItems: 'center',
+		shadowColor: '#000',
+		shadowOffset: {
+			width: 0,
+			height: 2,
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 4,
+		elevation: 5,
+	},
+	button: {
+		borderRadius: 20,
+		padding: 10,
+		elevation: 2,
+	},
+	buttonOpen: {
+		backgroundColor: '#F194FF',
+	},
+	buttonClose: {
+		backgroundColor: '#2196F3',
+	},
+	textStyle: {
+		color: 'white',
+		fontWeight: 'bold',
+		textAlign: 'center',
+	},
+	modalText: {
+		marginBottom: 15,
+		textAlign: 'center',
+	},
+});
+
 
 export default PlacePosition;

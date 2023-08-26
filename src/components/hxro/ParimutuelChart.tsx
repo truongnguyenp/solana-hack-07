@@ -15,7 +15,7 @@ export default function ParimutuelChart() {
 		const option = {
 			xAxis: {
 				type: 'category',
-				data: ['SKT Odds', 'Samsung Odds'],
+				data: ['Optimistic', 'Pessimistic'],
 			},
 			yAxis: {
 				type: 'value',

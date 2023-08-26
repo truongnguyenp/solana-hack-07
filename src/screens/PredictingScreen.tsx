@@ -1,6 +1,6 @@
 import * as Linking from "expo-linking";
 import { useEffect } from "react";
-import { Button, Image, Text } from "react-native";
+import { Button, Image, ScrollView, Text } from "react-native";
 import { atom, useRecoilState } from "recoil";
 
 import { Screen } from "../components/Screen";
@@ -42,19 +42,20 @@ export function PredictingScreens() {
 			}
 		}
 		>
-
-			{window.xnft.solana && (
-				<Text style={tw`text-center text-white`}>
-					SOL Balance: {(balance || 0).toLocaleString()}
-				</Text>
-			)}
-			<view className="text-center" style={{ alignContent: 'center' }}>
-				<view className="flex flex-col items-center justify-between md:flex-row">
-					<view className="mx-5 my-5 mb-5 md:mb-0">
-						<PariBox time={'1M'} />
-					</view>
-				</view>
-			</view>
+      <ScrollView>
+        {window.xnft.solana && (
+          <Text style={tw`text-center text-white`}>
+            SOL Balance: {(balance || 0).toLocaleString()}
+          </Text>
+        )}
+        <view className="text-center" style={{ alignContent: 'center' }}>
+          <view className="flex flex-col items-center justify-between md:flex-row">
+            <view className="mx-5 my-5 mb-5 md:mb-0">
+              <PariBox time={'1M'} />
+            </view>
+          </view>
+        </view>
+      </ScrollView>
 		</Screen>
 	);
 }
