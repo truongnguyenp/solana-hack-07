@@ -1,5 +1,4 @@
 import useNotificationStore from "../hooks/useNotificationStore";
-import { showMessage} from "react-native-flash-message";
 export function notify(newNotification: {
   type?: string
   message: string
@@ -19,9 +18,9 @@ export function notify(newNotification: {
   })
 }
 export const showSuccessMessage = () => {
-  showMessage({
-    message: "Success",
-    description: "This is a success message",
-    type: "success",
-  });
+  // showMessage({
+  //   message: "Success",
+  //   description: "This is a success message",
+  //   type: "success",
+  // });
 };
