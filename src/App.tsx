@@ -23,6 +23,7 @@ const Tab = createBottomTabNavigator();
 function TabNavigator() {
   return (
     <Tab.Navigator
+    
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: '#e91e63',
@@ -32,6 +33,7 @@ function TabNavigator() {
         name="Home"
         component={TokenInfoChartNavigator}
         options={{
+          headerShown: false,
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
