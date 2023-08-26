@@ -19,8 +19,9 @@ export function HomeScreen() {
   return (
     <Screen>
       <Text style={tw`mb-4`}>
-        You'll find several examples of how to build xNFTs using react-native:
+         Name App
       </Text>
+
       <FlatList
         data={features}
         keyExtractor={(item) => item}

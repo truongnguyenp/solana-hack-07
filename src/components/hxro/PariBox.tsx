@@ -140,7 +140,7 @@ window.Buffer = Buffer;
     return (
         <view>
             <view style={{
-                border: "1px solid white",
+                // border: "1px solid white",
                 boxSizing: "border-box",
                 alignItems: "center",
             }}>
