@@ -54,7 +54,7 @@ function TabNavigator() {
         component={TokenListNavigator}
         options={{
           headerShown: false,
-          tabBarLabel: 'Tokens',
+          tabBarLabel: 'Predicting battles',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="bank" color={color} size={size} />
           ),
