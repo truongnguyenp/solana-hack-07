@@ -1,52 +1,69 @@
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import { PublicKey } from '@solana/web3.js';
-import { FC, useCallback, useEffect } from 'react';
-import { ParimutuelWeb3, PositionSideEnum, WalletSigner } from '@hxronetwork/parimutuelsdk';
-import { PariConfig } from './Config';
-import { notify } from '../../utils/notifications';
+import {
+	Keypair,
+	Connection,
+} from '@solana/web3.js';
+import { FC } from 'react';
+import {
+	ParimutuelWeb3,
+	PositionSideEnum,
+	DEV_CONFIG,
+  MarketPairEnum,
+  getMarketPubkeys,
+} from '@hxronetwork/parimutuelsdk';
 import { View } from 'react-native';
-import { Button, Text } from '@rneui/base';
+import { Button } from '@rneui/base';
 import tw from 'twrnc';
 
+const privateKey = new Uint8Array([
+	70, 224, 61, 154, 54, 252, 229, 243, 14, 140, 229, 12, 152, 220, 123, 254,
+	160, 164, 44, 131, 155, 20, 10, 108, 71, 159, 52, 200, 0, 195, 70, 196, 55,
+	241, 189, 60, 16, 218, 175, 228, 209, 161, 98, 24, 156, 247, 94, 213, 185,
+	178, 35, 219, 110, 4, 218, 61, 156, 48, 136, 242, 160, 191, 140, 211,
+]);
+const keypair = Keypair.fromSecretKey(privateKey);
+
+const config = DEV_CONFIG;
+const rpc =
+	'https://devnet.helius-rpc.com/?api-key=6c8d6b2d-d450-40ae-8f14-06e093253afc';
+const connection = new Connection(rpc, 'confirmed');
+
+const parimutuelWeb3 = new ParimutuelWeb3(config, connection);
+
+const market = MarketPairEnum.BTCUSD;
+const marketPubkeys = getMarketPubkeys(config, market);
+const marketTerm = 60;
+const selectedMarket = marketPubkeys.filter(
+	(market) => market.duration === marketTerm
+);
+
+const usdcDec = 100_000_00;
+
 const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: string}> = (props) => {
-    const { connection } = useConnection();
-    const { publicKey, signTransaction } = useWallet();
-    const wallet = useWallet()
+    const { side, amount} = props
 
-    const { config } = PariConfig;
-    const parimutuelWeb3 = new ParimutuelWeb3(config, connection);
+    const placePosition = async () => {
+			const parimutuels = await parimutuelWeb3.getParimutuels(selectedMarket);
 
-    const {pariPubkey, side, amount} = props
+			const pariContest = parimutuels.filter(
+				(pari) =>
+					pari.info.parimutuel.timeWindowStart.toNumber() > Date.now() &&
+					pari.info.parimutuel.timeWindowStart.toNumber() <
+						Date.now() + marketTerm * 1000
+			);
 
-    useEffect(() => {
-    }, [pariPubkey]);
+			const contestPubkey = pariContest[0].pubkey;
+			
 
-    const onPress = useCallback(async (amount: string, pariPubkey: string) => {
-        if (!publicKey) {
-          notify({ type: 'error', message: 'Wallet not connected!' });
-          console.error('Send Transaction: Wallet not connected!');
-          return;
-        }
-        let transactionId = '';
-        try {
-      
-          transactionId = await parimutuelWeb3.placePosition(
-            wallet as WalletSigner,
-            new PublicKey(pariPubkey),
-            parseFloat(amount) * (10 ** 9 / 1),
-            side,
-            Date.now()
-          );
-      
-          if (transactionId) {
-            notify({ type: 'success', message: `Placed ${side === PositionSideEnum.LONG ? 'LONG' : 'SHORT'} Position`, txid: transactionId });
-          }
-        } catch (error: any) {
-          notify({ type: 'error', message: 'Transaction failed!', description: error?.message, txid: transactionId });
-          console.error(`Transaction failed! ${error?.message}`, transactionId);
-          return;
-        }
-      }, [publicKey, notify, connection, signTransaction]);
+			const txHash = await parimutuelWeb3.placePosition(
+				keypair as Keypair,
+				contestPubkey,
+				Number(amount) * usdcDec,
+				side,
+				Date.now()
+			);
+
+			console.log(txHash); //TODO: handle notification success
+		};
       
     const bgGradientClass =
     side === PositionSideEnum.LONG
@@ -55,25 +72,20 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 
 
     return (
-        <View>
-            <View
-                style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
-                onPress={() => onPress(amount, pariPubkey)} disabled={amount === '0'}
-            >
-                <Text >
-                    Enter Amount...
-                </Text>
-                <span className="block group-disabled:hidden" > 
-                   {amount} USDC 
-            
-                </span>
-
-                <Button style={tw`hidden group-disabled:block`}>
-                    {side === PositionSideEnum.LONG ? 'LONG' : 'SHORT'}
-                </Button>
-            </View>
-        </View>
-    );
+			<View style={{ borderRadius: 80 }}>
+				<Button
+					title={side === PositionSideEnum.LONG ? 'Win' : 'Lose'}
+					color={side === PositionSideEnum.LONG ? 'blue' : 'red'}
+					onPress={() => placePosition()}
+				>
+					<View
+						style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
+					>
+						<span className="block group-disabled:hidden">{amount} USDC</span>
+					</View>
+				</Button>
+			</View>
+		);
 };
 
 export default PlacePosition;

@@ -81,7 +81,6 @@ window.Buffer = Buffer;
           try {
               localStorage.clear();
               const parimutuels = await parimutuelWeb3.getParimutuels(marketsByTime);
-              console.log(parimutuels);
               const duration = marketsByTime[0].duration;
               
               const pari_markets = parimutuels.filter(
@@ -132,9 +131,7 @@ window.Buffer = Buffer;
           }
       };
 
-      const intervalId = setInterval(() => getPariData(), 1000);
-
-      return () => clearInterval(intervalId);
+      getPariData();
     }, []);
 
     return (

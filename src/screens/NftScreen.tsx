@@ -31,7 +31,6 @@ export function NftScreen() {
             async function fetch() {
                 setLoading(true)
                 const data = await getNftInfo()
-                console.log("nftData:", data)
                 setData(data)
                 setLoading(false)
             }
