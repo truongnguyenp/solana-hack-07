@@ -15,5 +15,6 @@ export function TokenCardInfo({ tokenInfo }: TokenCardInfoProps) {
       <Text style={tw`text-lg`}>Name: {tokenInfo.name}</Text>
       <Text style={tw`text-lg`}>Symbol: {tokenInfo.symbol}</Text>
       <Text style={tw`text-lg`}>Address: {tokenInfo.address}</Text>
-    </View>)
+    </View>
+  )
 }

@@ -1,11 +1,13 @@
-import { Text, View, FlatList } from "react-native";
+import { Text, FlatList } from "react-native";
 import tw from "twrnc";
 
 import { Screen } from "../components/Screen";
 import React, { useEffect, useState } from "react";
 import { TokenInfo } from "../types";
-import { ItemSeparatorComponent } from './TokenNavigator'
+import { ItemSeparatorComponent, forSlide } from './TokenNavigator'
 import { TokenCardInfo } from "../components/TokeInfoCard";
+import { Stack } from './TokenNavigator'
+import { ChartEsportcast } from "./ChartEsportcast";
 
 export function HomeScreen() {
   const listFakeTokensAddress = [
@@ -21,36 +23,52 @@ export function HomeScreen() {
   const fakeSymbolAndNameToken: {
     [address: string]: {
       name: string;
-      symbol: string
+      symbol: string,
+      tokenUsage: number[],
+      totalUserBetting: number[]
     }
   } = {
     'DK64rmGSZupv1dLYn57e3pUVgs9jL9EKLXDVZZPsMDz8': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'FXdxsZhNYGSBdne2LZ448SJ1QDXk8KaEzvKivCvc38h3': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '7XBMMSWMfXwshMWoPj7CL2WxudW5dY6UZCUVc3dDjaEG': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'HNtzvJgduuyNsFDnqH4GyHDqNQJShJMxzUcGnUW9xeWi': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '41QaQpUGPqLkDVae3cVxesZeZRh82G6ZpSaX86x5w8bk': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '8q7a4FpN9Di6TtT8RDbyZbwz1qmiKwmhNALRstQCbN4K': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'GTFBBcnRCT6Pa7rxDQHyYW4KMMebvkhB17dKBRkcHw78': {
       name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE'
+      symbol: 'FAKE_SYMBOL_HERE',
+      tokenUsage: [150, 230, 224, 218, 135, 147, 260],
+      totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     }
   }
 
@@ -102,4 +120,42 @@ export function HomeScreen() {
       />
     </Screen>
   );
+}
+
+export function TokenInfoChartNavigator() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        animationEnabled: true,
+        cardStyleInterpolator: forSlide,
+      }}
+    >
+      <Stack.Screen
+        name="tokenInfoList"
+        component={HomeScreen}
+        options={{ 
+          title: "Battles",
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+        }}
+      />
+
+      <Stack.Screen
+        name="Detail"
+        component={ChartEsportcast}
+       
+        options={{ title: "Predicting game detail",   headerStyle: {
+          backgroundColor: "#161723",
+        },  headerTitleStyle: {
+          color: "white",
+          // Add other title style properties as needed
+        }, }}
+      />
+    </Stack.Navigator>
+  )
 }
