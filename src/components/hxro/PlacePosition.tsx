@@ -7,6 +7,7 @@ import { notify } from '../../utils/notifications';
 import { View } from 'react-native';
 import { Button, Text } from '@rneui/base';
 import tw from 'twrnc';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: string}> = (props) => {
     const { connection } = useConnection();
@@ -56,7 +57,7 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 
     return (
         <View>
-            <View
+            <TouchableOpacity
                 style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
                 onPress={() => onPress(amount, pariPubkey)} disabled={amount === '0'}
             >
@@ -71,7 +72,7 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
                 <Button style={tw`hidden group-disabled:block`}>
                     {side === PositionSideEnum.LONG ? 'LONG' : 'SHORT'}
                 </Button>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 };
