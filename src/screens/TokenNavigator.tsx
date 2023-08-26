@@ -15,7 +15,7 @@ import {
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 import { Screen } from "../components/Screen";
-import { TokenRow } from "../components/TokenRow";
+import { GameRow } from "../components/GameRow";
 import { Game } from "../types";
 
 type RootStackParamList = {
@@ -160,7 +160,7 @@ function List({
 }: NativeStackScreenProps<RootStackParamList, "List">) {
   const { data, loading } = useTokenData();
 
-  const handlePressTokenRow = (id: string) => {
+  const handlePressGameRow = (id: string) => {
     navigation.push("Detail", { id });
   };
 
@@ -184,9 +184,9 @@ function List({
         ItemSeparatorComponent={ItemSeparatorComponent}
         renderItem={({ item }) => {
           return (
-            <TokenRow
+            <GameRow
               game={item}
-              onPress={handlePressTokenRow}
+              onPress={handlePressGameRow}
             />
           );
         }}
@@ -280,7 +280,7 @@ export const TokenListNavigator = () => {
       <Stack.Screen
         name="List"
         component={List}
-        options={{ title: "Token List" }}
+        options={{ title: "Game List" }}
       />
       <Stack.Screen
         name="Detail"

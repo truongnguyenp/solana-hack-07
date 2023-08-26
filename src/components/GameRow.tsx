@@ -10,7 +10,7 @@ type Props = {
   onPress: (id: string) => void;
 };
 
-export function TokenRow({game, onPress }: Props) {
+export function GameRow({game, onPress }: Props) {
   return (
     <Pressable onPress={() => onPress?.(game.id)} style={styles.container}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
