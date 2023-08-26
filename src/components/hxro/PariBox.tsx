@@ -162,11 +162,11 @@ window.Buffer = Buffer;
                             marginRight: "5px",
                         }}
                     >
-                        <Text style={{ color: "white" }}>Long Pool:</Text>
-                        <Text style={{ color: "white" }}>Short Pool:</Text>
-                        <Text style={{ color: "white" }}>Long Odds:</Text>
-                        <Text style={{ color: "white" }}>Short Odds:</Text>
-                        <Text style={{ color: "white" }}>Starts In:</Text>
+                        <Text style={{ color: "white" }}>Optimistic Prediction:</Text>
+                        <Text style={{ color: "white" }}>Pessimistic Prediction:</Text>
+                        <Text style={{ color: "white" }}>SKT Odds:</Text>
+                        <Text style={{ color: "white" }}>T1 Odds:</Text>
+                        <Text style={{ color: "white" }}>Match Begins In:</Text>
                     </view>
                     <view
                         style={{
