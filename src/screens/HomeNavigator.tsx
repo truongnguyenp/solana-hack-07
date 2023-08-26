@@ -140,6 +140,16 @@ export function TokenInfoChartNavigator() {
       <Stack.Screen
         name="List"
         component={HomeScreen}
+        options={{ 
+          title: "Battles",
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+        }}
       />
 
       <Stack.Screen
