@@ -4,6 +4,9 @@ import { FC, useCallback, useEffect } from 'react';
 import { ParimutuelWeb3, PositionSideEnum, WalletSigner } from '@hxronetwork/parimutuelsdk';
 import { PariConfig } from './Config';
 import { notify } from '../../utils/notifications';
+import { View } from 'react-native';
+import { Button, Text } from '@rneui/base';
+import tw from 'twrnc';
 
 const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: string}> = (props) => {
     const { connection } = useConnection();
@@ -18,7 +21,7 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
     useEffect(() => {
     }, [pariPubkey]);
 
-    const onClick = useCallback(async (amount: string, pariPubkey: string) => {
+    const onPress = useCallback(async (amount: string, pariPubkey: string) => {
         if (!publicKey) {
           notify({ type: 'error', message: 'Wallet not connected!' });
           console.error('Send Transaction: Wallet not connected!');
@@ -52,19 +55,24 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 
 
     return (
-        <div>
-            <button
-                className={`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
-                onClick={() => onClick(amount, pariPubkey)} disabled={amount === '0'}
+        <View>
+            <View
+                style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
+                onPress={() => onPress(amount, pariPubkey)} disabled={amount === '0'}
             >
-                <div className="hidden group-disabled:block ">
+                <Text >
                     Enter Amount...
-                </div>
+                </Text>
                 <span className="block group-disabled:hidden" > 
-                   {amount} USDC {side === PositionSideEnum.LONG? 'LONG' : 'SHORT'}
+                   {amount} USDC 
+            
                 </span>
-            </button>
-        </div>
+
+                <Button style={tw`hidden group-disabled:block`}>
+                    {side === PositionSideEnum.LONG ? 'LONG' : 'SHORT'}
+                </Button>
+            </View>
+        </View>
     );
 };
 

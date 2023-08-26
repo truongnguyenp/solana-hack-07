@@ -10,6 +10,7 @@ import { useEffect } from "react";
 // import PlacePositionBox from './PlacePositionBox'
 import { PariConfig } from "./Config";
 import PlacePositionBox from "./PlacePositionBox";
+import { Buffer } from 'buffer';
 
 interface PariObj {
     longPool: any;
@@ -51,6 +52,9 @@ const TimeInterval = [
 ];
 
 export const PariBox: FC<{ time: string }> = (props) => {
+
+// @ts-ignore
+window.Buffer = Buffer;
     const { time } = props;
     const selectedTime = TimeInterval.filter((data) => data.interval === time);
     const timeSeconds = selectedTime[0].seconds

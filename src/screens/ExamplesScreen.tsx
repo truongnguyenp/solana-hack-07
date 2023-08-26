@@ -10,7 +10,7 @@ import useUserSOLBalanceStore from "../hooks/useUserSOLBalanceStore";
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 import { useDidLaunch } from "../hooks/xnft-hooks";
 import { PariBox } from "../components/hxro/PariBox";
-
+import tw from "twrnc";
 const testAtom = atom<"native" | "bright">({
   key: "testAtom",
   default: "native",
@@ -38,20 +38,11 @@ export function ExamplesScreens() {
   console.log(balance);
   return (
 		<Screen>
-			<Section title="Recoil">
-				<Button
-					title={`The Future is ${future}`}
-					color={
-						future === 'bright' ? 'rgb(228, 208, 10)' : 'rgb(33, 150, 243)'
-					}
-					onPress={() => setFuture(future === 'bright' ? 'native' : 'bright')}
-				/>
-			</Section>
 
 			{window.xnft.solana && (
-				<p className="text-center">
+				<Text style={tw`text-center`}>
 					SOL Balance: {(balance || 0).toLocaleString()}
-				</p>
+				</Text>
 			)}
 			<view className="text-center" style={{ alignContent: 'center' }}>
 				<view className="flex flex-col items-center justify-between md:flex-row">
