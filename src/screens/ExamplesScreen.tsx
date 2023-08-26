@@ -30,12 +30,10 @@ export function ExamplesScreens() {
 
 	useEffect(() => {
 		if (didLaunch) {
-      console.log(window.xnft.solana.publicKey.toBase58());
 			getUserSOLBalance(window.xnft.solana.publicKey, window.xnft.solana.connection);
 		}
 	}, [window.xnft.solana.publicKey, window.xnft.solana.connection, getUserSOLBalance, didLaunch]);
 
-  console.log(balance);
   return (
 		<Screen>
 

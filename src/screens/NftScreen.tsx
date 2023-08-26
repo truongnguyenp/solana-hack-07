@@ -31,7 +31,6 @@ export function NftScreen() {
             async function fetch() {
                 setLoading(true)
                 const data = await getNftInfo()
-                console.log("nftData:", data)
                 setData(data)
                 setLoading(false)
             }
@@ -66,7 +65,9 @@ export function NftScreen() {
     const pks: any = usePublicKeys()
     let pk = pks ? new PublicKey(pks?.solana) : undefined
     return (
-        <Screen>
+        <Screen
+         
+        >
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Image source={{ uri: imageUri }} style={tw`w-80 h-80 alignItems: "center" rounded m-4`} />
             </View>

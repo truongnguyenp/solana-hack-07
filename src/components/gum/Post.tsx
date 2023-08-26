@@ -60,7 +60,7 @@ function Post({
                 src={profileData.avatar}
                 name={profileData.name}
                 size="md"
-                bordered
+                // bordered
                 color="secondary"
               >
                 <Text
@@ -142,8 +142,8 @@ function Post({
               style={{
                 paddingHorizontal: 14,
                 paddingVertical: 8,
-                borderWidth: 1,
-                borderColor: 'gray',
+                // borderWidth: 1,
+                // borderColor: 'gray',
                 borderRadius: 8,
                 marginBottom: 8,
               }}
@@ -151,7 +151,7 @@ function Post({
             <Button
               auto
               rounded
-              bordered={true}
+              // bordered={true}
               onPress={() => {
                 // CandyPayHelper.tran(data.address).then((data) => {
                 //   console.log(data.payment_url);

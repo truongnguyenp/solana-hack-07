@@ -34,7 +34,7 @@ const PlacePositionBox: FC<{ pubkey: string }> = (props) => {
                 value={inputValue}
                 onChange={handleChange}
                 placeholder={inputValue}
-                style={{ color: 'black', borderRadius: '10px', display: 'inline-block', textAlign: 'center', }}
+                style={{ color: 'black', Radius: '10px', display: 'inline-block', textAlign: 'center', }}
             />
             <view style={{ marginLeft: '-15px', marginTop: '10px' }}>
                 <PlacePosition amount={amount} pariPubkey={pubkey} side={PositionSideEnum.LONG}/>
