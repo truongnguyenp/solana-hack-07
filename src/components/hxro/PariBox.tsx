@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { PariConfig } from "./Config";
 import PlacePositionBox from "./PlacePositionBox";
 import { Buffer } from 'buffer';
+import { Text } from "@rneui/base";
 
 interface PariObj {
     longPool: any;
@@ -132,6 +133,9 @@ window.Buffer = Buffer;
       };
 
       getPariData();
+      const intervalId = setInterval(() => getPariData(), 1000);
+
+      return () => clearInterval(intervalId);
     }, []);
 
     return (
@@ -147,9 +151,10 @@ window.Buffer = Buffer;
                         flexDirection: "row",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        gap: "10",
                     }}
                 >
-                    <view
+                      <view
                         style={{
                             display: "flex",
                             flexDirection: "column",
@@ -157,40 +162,42 @@ window.Buffer = Buffer;
                             marginRight: "5px",
                         }}
                     >
-                        <p>Long Pool:</p>
-                        <p>Short Pool:</p>
-                        <p>Long Odds:</p>
-                        <p>Short Odds:</p>
-                        <p>Starts In:</p>
+                        <Text style={{ color: "white" }}>Long Pool:</Text>
+                        <Text style={{ color: "white" }}>Short Pool:</Text>
+                        <Text style={{ color: "white" }}>Long Odds:</Text>
+                        <Text style={{ color: "white" }}>Short Odds:</Text>
+                        <Text style={{ color: "white" }}>Starts In:</Text>
                     </view>
                     <view
                         style={{
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "flex-end",
-                            marginLeft: "5px",
+                            marginLeft: 5,
                         }}
                     >
-                        <p style={{ fontWeight: "bold" }}></p>
-                        <p style={{ fontWeight: "bold" }}>
+                        <Text style={{ fontWeight: "bold", color: "white" }}></Text>
+                        <Text style={{ fontWeight: "bold", color: "white" }}>
                             {pariObj ? pariObj.longPool : "0"}
-                        </p>
-                        <p style={{ fontWeight: "bold" }}>
+                        </Text>
+                        <Text style={{ fontWeight: "bold", color: "white" }}>
                             {pariObj ? pariObj.shortPool : "0"}
-                        </p>
-                        <p style={{ fontWeight: "bold" }}>
+                        </Text>
+                        <Text style={{ fontWeight: "bold", color: "white" }}>
                             {pariObj ? pariObj.longOdds : "0"}
-                        </p>
-                        <p style={{ fontWeight: "bold" }}>
+                        </Text>
+                        <Text style={{ fontWeight: "bold", color: "white" }}>
                             {pariObj ? pariObj.shortOdds : "0"}
-                        </p>
-                        <p style={{ fontWeight: "bold" }}>{countDownTime}</p>
+                        </Text>
+                        <Text style={{ fontWeight: "bold", color: "white" }}>
+                            {countDownTime}
+                        </Text>
                     </view>
                 </view>
-                <view style={{marginTop:'20px'}}>
+                <view style={{marginTop:'40px'}}>
                    <PlacePositionBox pubkey={pariObj? pariObj.pubkey : 'Loading'}/>
                 </view>
             </view>
-        </view>
+            </view>
     );
 };

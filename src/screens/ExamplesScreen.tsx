@@ -35,10 +35,16 @@ export function ExamplesScreens() {
 	}, [window.xnft.solana.publicKey, window.xnft.solana.connection, getUserSOLBalance, didLaunch]);
 
   return (
-		<Screen>
+		<Screen
+		style={
+			{
+				backgroundColor: '#161723',
+			}
+		}
+		>
 
 			{window.xnft.solana && (
-				<Text style={tw`text-center`}>
+				<Text style={tw`text-center text-white`}>
 					SOL Balance: {(balance || 0).toLocaleString()}
 				</Text>
 			)}

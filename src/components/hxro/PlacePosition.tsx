@@ -11,11 +11,10 @@ import {
   getMarketPubkeys,
 } from '@hxronetwork/parimutuelsdk';
 import { View } from 'react-native';
-import { Button } from '@rneui/base';
+import { Button, Text } from '@rneui/base';
 import tw from 'twrnc';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { notify } from '../../utils/notifications';
-
+import { notify, showSuccessMessage } from '../../utils/notifications';
 const privateKey = new Uint8Array([
 	70, 224, 61, 154, 54, 252, 229, 243, 14, 140, 229, 12, 152, 220, 123, 254,
 	160, 164, 44, 131, 155, 20, 10, 108, 71, 159, 52, 200, 0, 195, 70, 196, 55,
@@ -62,9 +61,12 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 				Number(amount) * usdcDec,
 				side,
 				Date.now()
-			);
-			console.log("v");
-			!txHash && notify({ message: 'Transaction sent', txid: txHash });
+			).then(
+				(res) => {
+					showSuccessMessage()
+					console.log("ok")
+				}
+			)
 		};
       
     const bgGradientClass =
@@ -83,7 +85,9 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 					<View
 						style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
 					>
-						<span className="block group-disabled:hidden">{amount} USDC</span>
+					
+						<Text style={tw`block text-white`}>	team A win</Text>
+						<Text style={tw`block group-disabled:hidden text-white`}>{amount} USDC</Text>
 					</View>
 				</Button>
 			</View>

@@ -17,6 +17,8 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Screen } from "../components/Screen";
 import { GameRow } from "../components/GameRow"
 import { Game } from "../types";
+import { HomeScreen } from "./HomeScreen";
+import { ExamplesScreens } from "./ExamplesScreen";
 
 type RootStackParamList = {
   List: {};
@@ -392,9 +394,12 @@ export const TokenListNavigator = () => {
 
       <Stack.Screen
         name="Detail"
-        component={Detail}
+        component={ExamplesScreens}
        
-        options={{ title: "Token Detail" }}
+        options={{ title: "Predicting game detail", headerTitleStyle: {
+          color: "white",
+          // Add other title style properties as needed
+        }, }}
       />
     </Stack.Navigator>
   );
