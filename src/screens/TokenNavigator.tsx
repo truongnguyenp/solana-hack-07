@@ -403,7 +403,12 @@ export const TokenListNavigator = () => {
         },  headerTitleStyle: {
           color: "white",
           // Add other title style properties as needed
-        }, }}
+        }, 
+        headerBackTitleStyle: {
+          color: "white",
+        },
+        headerTintColor: "white",
+      }}
       />
     </Stack.Navigator>
   );

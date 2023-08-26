@@ -151,7 +151,9 @@ export function TokenInfoChartNavigator() {
         },  headerTitleStyle: {
           color: "white",
           // Add other title style properties as needed
-        }, }}
+        },
+        headerTintColor: "white",
+      }}
       />
     </Stack.Navigator>
   )
