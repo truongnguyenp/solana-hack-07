@@ -3,9 +3,8 @@ import { RecoilRoot } from 'recoil';
 import { ActivityIndicator, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons';
 import { useFonts, Inter_900Black } from '@expo-google-fonts/dev';
-
 import { PredictingScreens } from './screens/PredictingScreen';
 import { HomeScreen, TokenInfoChartNavigator } from './screens/HomeNavigator';
 import { ChartEsportcast } from './screens/ChartEsportcast'
@@ -17,6 +16,7 @@ import XnftContextProvider, {
 } from './provider/XnftProvider';
 import tw from 'twrnc';
 import { useTheme } from './hooks/useTheme';
+import DecisionHistoryScreen from './screens/History';
 
 const Tab = createBottomTabNavigator();
 
@@ -120,6 +120,29 @@ function TabNavigator() {
           },
           tabBarIconStyle: {
             // Styling for tabBarIcon
+          },
+        }}
+      />
+          <Tab.Screen
+        name="History"
+        component={DecisionHistoryScreen}
+        options={{
+          tabBarLabel: 'History',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="history" color={color} size={size} />
+          ),
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+
+            borderBottomWidth: 0,
+          },
+          tabBarStyle: {
+            backgroundColor: '#161723',
+            borderTopWidth: 0,
+            // Other tabBar style properties
           },
         }}
       />
