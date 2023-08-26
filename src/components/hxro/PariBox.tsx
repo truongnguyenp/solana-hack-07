@@ -12,6 +12,7 @@ import { PariConfig } from "./Config";
 import PlacePositionBox from "./PlacePositionBox";
 import { Buffer } from 'buffer';
 import { Text } from "@rneui/base";
+import ParimutuelChart from "./ParimutuelChart";
 
 interface PariObj {
     longPool: any;
@@ -139,65 +140,70 @@ window.Buffer = Buffer;
     }, []);
 
     return (
-        <view>
-            <view style={{
-                // border: "1px solid white",
-                boxSizing: "border-box",
-                alignItems: "center",
-            }}>
-                <view
-                    style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        gap: "10",
-                    }}
-                >
-                      <view
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "flex-start",
-                            marginRight: "5px",
-                        }}
-                    >
-                        <Text style={{ color: "white" }}>Optimistic Prediction:</Text>
-                        <Text style={{ color: "white" }}>Pessimistic Prediction:</Text>
-                        <Text style={{ color: "white" }}>SKT Odds:</Text>
-                        <Text style={{ color: "white" }}>T1 Odds:</Text>
-                        <Text style={{ color: "white" }}>Match Begins In:</Text>
-                    </view>
-                    <view
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "flex-end",
-                            marginLeft: 5,
-                        }}
-                    >
-                        <Text style={{ fontWeight: "bold", color: "white" }}></Text>
-                        <Text style={{ fontWeight: "bold", color: "white" }}>
-                            {pariObj ? pariObj.longPool : "0"}
-                        </Text>
-                        <Text style={{ fontWeight: "bold", color: "white" }}>
-                            {pariObj ? pariObj.shortPool : "0"}
-                        </Text>
-                        <Text style={{ fontWeight: "bold", color: "white" }}>
-                            {pariObj ? pariObj.longOdds : "0"}
-                        </Text>
-                        <Text style={{ fontWeight: "bold", color: "white" }}>
-                            {pariObj ? pariObj.shortOdds : "0"}
-                        </Text>
-                        <Text style={{ fontWeight: "bold", color: "white" }}>
-                            {countDownTime}
-                        </Text>
-                    </view>
-                </view>
-                <view style={{marginTop:'40px'}}>
-                   <PlacePositionBox pubkey={pariObj? pariObj.pubkey : 'Loading'}/>
-                </view>
-            </view>
-            </view>
-    );
+			<view>
+				<view
+					style={{
+						// border: "1px solid white",
+						boxSizing: 'border-box',
+						alignItems: 'center',
+					}}
+				>
+					{pariObj ? <view>
+						<ParimutuelChart />
+					</view> : null}
+					<view
+						style={{
+							display: 'flex',
+							flexDirection: 'row',
+							justifyContent: 'space-between',
+							alignItems: 'center',
+							gap: '10',
+						}}
+					>
+						<view
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'flex-start',
+								marginRight: '5px',
+							}}
+						>
+							<Text style={{ color: 'white' }}>Optimistic Prediction:</Text>
+							<Text style={{ color: 'white' }}>Pessimistic Prediction:</Text>
+							<Text style={{ color: 'white' }}>SKT Odds:</Text>
+							<Text style={{ color: 'white' }}>T1 Odds:</Text>
+							<Text style={{ color: 'white' }}>Match Begins In:</Text>
+						</view>
+						<view
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'flex-end',
+								marginLeft: 5,
+							}}
+						>
+							<Text style={{ fontWeight: 'bold', color: 'white' }}></Text>
+							<Text style={{ fontWeight: 'bold', color: 'white' }}>
+								{pariObj ? pariObj.longPool : '0'}
+							</Text>
+							<Text style={{ fontWeight: 'bold', color: 'white' }}>
+								{pariObj ? pariObj.shortPool : '0'}
+							</Text>
+							<Text style={{ fontWeight: 'bold', color: 'white' }}>
+								{pariObj ? pariObj.longOdds : '0'}
+							</Text>
+							<Text style={{ fontWeight: 'bold', color: 'white' }}>
+								{pariObj ? pariObj.shortOdds : '0'}
+							</Text>
+							<Text style={{ fontWeight: 'bold', color: 'white' }}>
+								{countDownTime}
+							</Text>
+						</view>
+					</view>
+					<view style={{ marginTop: '40px' }}>
+						<PlacePositionBox pubkey={pariObj ? pariObj.pubkey : 'Loading'} />
+					</view>
+				</view>
+			</view>
+		);
 };
