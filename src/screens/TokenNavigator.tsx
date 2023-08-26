@@ -41,103 +41,9 @@ function FullScreenLoadingIndicator() {
 }
 
 async function fetchTokenData(count = 20): Promise<Game[]> {
-  // const games = [
-  //   {
-  //     id: 1,
-  //     team1: {
-  //       name: 'SKT',
-  //       logo: require('../../assets/teamLogo/SKT.png'),
-  //       score: 2,
-  //     },
-  //     team2: {
-  //       name: 'IG',
-  //       logo: require('../../assets/teamLogo/IG.png'),
-  //       score: 1,
-  //     },
-  //   },
-  //   {
-  //     id: 2,
-  //     team1: {
-  //       name: 'FNC',
-  //       logo: require('../../assets/teamLogo/FNC.png'),
-  //       score: 3,
-  //     },
-  //     team2: {
-  //       name: 'TL',
-  //       logo: require('../../assets/teamLogo/TL.png'),
-  //       score: 2,
-  //     },
-  //   },
-  //   {
-  //     id: 3,
-  //     team1: {
-  //       name: 'G2',
-  //       logo: require('../../assets/teamLogo/G2.png'),
-  //       score: 0,
-  //     },
-  //     team2: {
-  //       name: 'DWG',
-  //       logo: require('../../assets/teamLogo/DWG.png'),
-  //       score: 2,
-  //     },
-  //   },
-  //   {
-  //     id: 4,
-  //     team1: {
-  //       name: 'RNG',
-  //       logo: require('../../assets/teamLogo/RNG.png'),
-  //       score: 1,
-  //     },
-  //     team2: {
-  //       name: 'TL',
-  //       logo: require('../../assets/teamLogo/C9.png'),
-  //       score: 2,
-  //     },
-  //   },
-  //   {
-  //     id: 5,
-  //     team1: {
-  //       name: 'C9',
-  //       logo: require('../../assets/teamLogo/C9.png'),
-  //       score: 1,
-  //     },
-  //     team2: {
-  //       name: 'SKT',
-  //       logo: require('../../assets/teamLogo/SKT.png'),
-  //       score: 2,
-  //     },
-  //   },
-  //   {
-  //     id: 5,
-  //     team1: {
-  //       name: 'IG',
-  //       logo: require('../../assets/teamLogo/IG.png'),
-  //       score: 1,
-  //     },
-  //     team2: {
-  //       name: 'TL',
-  //       logo: require('../../assets/teamLogo/TL.png'),
-  //       score: 2,
-  //     },
-  //   },
-  //   {
-  //     id: 2,
-  //     team1: {
-  //       name: 'FNC',
-  //       logo: require('../../assets/teamLogo/FNC.png'),
-  //       score: 3,
-  //     },
-  //     team2: {
-  //       name: 'G2',
-  //       logo: require('../../assets/teamLogo/G2.png'),
-  //       score: 2,
-  //     },
-  //   },
-  // ];
-  
   const games: Game[] = [
     {
-      id: "1",
+      id: 1,
       team1: {
         name: 'SKT',
         logo: require('../../assets/teamLogo/SKT.png'),
@@ -145,54 +51,54 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       },
       team2: {
         name: 'IG',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/IG.png'),
         score: 1,
       },
     },
     {
-      id: "2",
+      id: 2,
       team1: {
         name: 'FNC',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/FNC.png'),
         score: 3,
       },
       team2: {
         name: 'TL',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/TL.png'),
         score: 2,
       },
     },
     {
-      id: "3",
+      id: 3,
       team1: {
         name: 'G2',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/G2.png'),
         score: 0,
       },
       team2: {
         name: 'DWG',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/DWG.png'),
         score: 2,
       },
     },
     {
-      id: "4",
+      id: 4,
       team1: {
         name: 'RNG',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/RNG.png'),
         score: 1,
       },
       team2: {
         name: 'TL',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/C9.png'),
         score: 2,
       },
     },
     {
-      id: "5",
+      id: 5,
       team1: {
         name: 'C9',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/C9.png'),
         score: 1,
       },
       team2: {
@@ -202,32 +108,126 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
       },
     },
     {
-      id: "5",
+      id: 5,
       team1: {
         name: 'IG',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/IG.png'),
         score: 1,
       },
       team2: {
         name: 'TL',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/TL.png'),
         score: 2,
       },
     },
     {
-      id: "2",
+      id: 2,
       team1: {
         name: 'FNC',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/FNC.png'),
         score: 3,
       },
       team2: {
         name: 'G2',
-        logo: require('../../assets/teamLogo/SKT.png'),
+        logo: require('../../assets/teamLogo/G2.png'),
         score: 2,
       },
     },
   ];
+  
+  // const games: Game[] = [
+  //   {
+  //     id: "1",
+  //     team1: {
+  //       name: 'SKT',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //     team2: {
+  //       name: 'IG',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 1,
+  //     },
+  //   },
+  //   {
+  //     id: "2",
+  //     team1: {
+  //       name: 'FNC',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 3,
+  //     },
+  //     team2: {
+  //       name: 'TL',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: "3",
+  //     team1: {
+  //       name: 'G2',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 0,
+  //     },
+  //     team2: {
+  //       name: 'DWG',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: "4",
+  //     team1: {
+  //       name: 'RNG',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 1,
+  //     },
+  //     team2: {
+  //       name: 'TL',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: "5",
+  //     team1: {
+  //       name: 'C9',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 1,
+  //     },
+  //     team2: {
+  //       name: 'SKT',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: "5",
+  //     team1: {
+  //       name: 'IG',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 1,
+  //     },
+  //     team2: {
+  //       name: 'TL',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  //   {
+  //     id: "2",
+  //     team1: {
+  //       name: 'FNC',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 3,
+  //     },
+  //     team2: {
+  //       name: 'G2',
+  //       logo: require('../../assets/teamLogo/SKT.png'),
+  //       score: 2,
+  //     },
+  //   },
+  // ];
 
   return  games;
 }
@@ -396,7 +396,9 @@ export const TokenListNavigator = () => {
         name="Detail"
         component={ExamplesScreens}
        
-        options={{ title: "Predicting game detail", headerTitleStyle: {
+        options={{ title: "Predicting game detail",   headerStyle: {
+          backgroundColor: "#161723",
+        },  headerTitleStyle: {
           color: "white",
           // Add other title style properties as needed
         }, }}
