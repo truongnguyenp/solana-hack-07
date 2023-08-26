@@ -46,7 +46,6 @@ export function ChartEsportcast() {
 
   return (
     <Screen>
-      <Text style={tw`mb-4`}>chart EsportForecast</Text>
       <SkiaChart ref={skiaRef}/>
     </Screen>
   );

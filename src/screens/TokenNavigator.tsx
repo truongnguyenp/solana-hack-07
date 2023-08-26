@@ -17,12 +17,12 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Screen } from "../components/Screen";
 import { GameRow } from "../components/GameRow"
 import { Game } from "../types";
-import { HomeScreen } from "./HomeScreen";
-import { ExamplesScreens } from "./ExamplesScreen";
+import { HomeScreen } from "./HomeNavigator";
+import { PredictingScreens } from "./PredictingScreen";
 
-type RootStackParamList = {
+export type RootStackParamList = {
   List: {};
-  Detail: { id: string };
+  Detail?: { id: string };
 };
 
 interface Team {
@@ -30,7 +30,7 @@ interface Team {
   logo: any;
   score: number;
 }
-const Stack = createStackNavigator<RootStackParamList>();
+export const Stack = createStackNavigator<RootStackParamList>();
 
 function FullScreenLoadingIndicator() {
   return (
@@ -328,7 +328,7 @@ function Detail({
   );
 }
 
-const forSlide: StackCardStyleInterpolator = ({
+export const forSlide: StackCardStyleInterpolator = ({
   current,
   next,
   inverted,
@@ -396,7 +396,7 @@ export const TokenListNavigator = () => {
 
       <Stack.Screen
         name="Detail"
-        component={ExamplesScreens}
+        component={PredictingScreens}
        
         options={{ title: "Predicting game detail",   headerStyle: {
           backgroundColor: "#161723",

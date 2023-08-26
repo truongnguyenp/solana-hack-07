@@ -6,8 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useFonts, Inter_900Black } from '@expo-google-fonts/dev';
 
-import { ExamplesScreens } from './screens/ExamplesScreen';
-import { HomeScreen } from './screens/HomeScreen';
+import { PredictingScreens } from './screens/PredictingScreen';
+import { HomeScreen, TokenInfoChartNavigator } from './screens/HomeNavigator';
 import { ChartEsportcast } from './screens/ChartEsportcast'
 import { TokenListNavigator } from './screens/TokenNavigator';
 import { NftScreen } from './screens/NftScreen';
@@ -30,9 +30,8 @@ function TabNavigator() {
     >
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={TokenInfoChartNavigator}
         options={{
-          tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
@@ -96,7 +95,7 @@ function TabNavigator() {
       />
       <Tab.Screen
         name="Examples"
-        component={ExamplesScreens}
+        component={PredictingScreens}
         options={{
           tabBarLabel: 'Examples',
           tabBarIcon: ({ color, size }) => (
