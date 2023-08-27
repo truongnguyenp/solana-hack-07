@@ -49,7 +49,7 @@ export function ChartEsportcast({ navigation, route }) {
 
   return (
     <Screen>
-      <Text style={tw`text-center`}>Chart of token ${name}</Text>
+      <Text style={tw`text-center`}>Chart of token {name}</Text>
       <View style={styles.noteContainer}>
         <View style={[styles.noteLine, { backgroundColor: 'yellow' }]} />
         <Text style={styles.noteText}>Total user betting</Text>
