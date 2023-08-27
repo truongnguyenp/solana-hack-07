@@ -9,9 +9,8 @@ import { PredictingScreens } from './screens/PredictingScreen';
 import { HomeScreen, TokenInfoChartNavigator } from './screens/HomeNavigator';
 import { ChartEsportcast } from './screens/ChartEsportcast'
 import { TokenListNavigator } from './screens/TokenNavigator';
-import { NftScreen } from './screens/NftScreen';
-
-import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign, Ionicons } from '@expo/vector-icons'; 
+import { PersonalScreen } from './screens/PersonalScreen'
 
 import XnftContextProvider, {
   IFRAME_ORIGIN,
@@ -99,12 +98,12 @@ function TabNavigator() {
         }}
       />
       <Tab.Screen
-        name="NFT"
-        component={NftScreen}
+        name="Personal"
+        component={PersonalScreen}
         options={{
-          tabBarLabel: 'NFT',
+          tabBarLabel: 'Personal',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="map" color={color} size={size} />
+            <Ionicons name="person" color={color} size={size} />
           ),
           headerStyle: {
             backgroundColor: "#161723",

@@ -63,7 +63,43 @@ export interface TokenInfo {
 }
 
 export interface DataNavigateToChart {
-  name: string,
-  tokenUsage: number[],
-  totalUserBetting: number[]
+  name: string;
+  tokenUsage: number[];
+  totalUserBetting: number[];
+}
+
+interface FetchReport {
+  id: string;
+  status: string;
+  duration: number;
+}
+
+interface Assert {
+  type: string;
+  networkId: string;
+  value: number;
+  data: {
+    address: string;
+    amount: number;
+    price: number;
+  };
+}
+
+export interface PortfolioUser {
+  date: number;
+  owner: string;
+  addressSystem: string;
+  fetcherReports: FetchReport[];
+  elements: [
+    {
+      type: string;
+      networkId: string;
+      platformId: string;
+      label: string;
+      value: number;
+      data: {
+        assets: Assert[]
+      };
+    }
+  ];
 }
