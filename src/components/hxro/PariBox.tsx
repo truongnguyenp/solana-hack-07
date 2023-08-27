@@ -148,9 +148,7 @@ window.Buffer = Buffer;
 						alignItems: 'center',
 					}}
 				>
-					{pariObj ? <view>
-						<ParimutuelChart />
-					</view> : null}
+					<ParimutuelChart />
 					<view
 						style={{
 							display: 'flex',
