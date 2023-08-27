@@ -52,7 +52,7 @@ export function HistoryList({
       <FlatList
       showsHorizontalScrollIndicator={false}
         style={{ flex: 1}}
-        data={data}
+        data={data.slice(0, 2)}
         keyExtractor={(item) => item.id}
         ItemSeparatorComponent={ItemSeparatorComponent}
 
