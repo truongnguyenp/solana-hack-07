@@ -232,7 +232,7 @@ async function fetchTokenData(count = 20): Promise<Game[]> {
   return  games;
 }
 
-function useTokenData() {
+export function useTokenData() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<Game[]>([]);
 
@@ -257,7 +257,7 @@ export const ItemSeparatorComponent = () => (
   />
 );
 
-function List({
+export function List({
   navigation,
 }: NativeStackScreenProps<RootStackParamList, "List">) {
   const { data, loading } = useTokenData();

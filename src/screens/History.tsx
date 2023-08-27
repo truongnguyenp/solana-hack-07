@@ -2,40 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-
-const DecisionHistoryScreen = () => {
-  const [decisionHistory, setDecisionHistory] = useState([]);
-
-  // Simulated data for decision history (replace with actual data)
-  const simulatedData = [
-    { id: '1', decision: 'Buy', timestamp: '2023-08-25 15:30:00' },
-    { id: '2', decision: 'Sell', timestamp: '2023-08-24 10:15:00' },
-    // ... more data
-  ];
-
-  useEffect(() => {
-    // Fetch decision history data from your data source
-    // For now, using simulated data
-    setDecisionHistory(simulatedData);
-  }, []);
-
-  const renderDecisionItem = ({ item }) => (
-    <View style={styles.decisionItem}>
-      <Text style={styles.decisionText}>{item.decision}</Text>
-      <Text style={styles.timestampText}>{item.timestamp}</Text>
-    </View>
-  );
-
-  return (
-    <View style={styles.container}>
-      <FlatList
-        data={decisionHistory}
-        keyExtractor={item => item.id}
-        renderItem={renderDecisionItem}
-      />
-    </View>
-  );
-};
+import { ItemSeparatorComponent, List, RootStackParamList, forSlide, useTokenData } from './TokenNavigator';
+import { Stack } from './TokenNavigator';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { GameRow } from '../components/GameRow';
+import { FullScreenLoadingIndicator } from '../components/common/LoadingScreen';
+import { Screen } from '../components/Screen';
 
 const styles = StyleSheet.create({
   container: {
@@ -58,4 +30,67 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DecisionHistoryScreen;
+export function HistoryList({
+  navigation,
+}: NativeStackScreenProps<RootStackParamList, "List">) {
+  const { data, loading } = useTokenData();
+
+  const handlePressGameRow = (id: string) => {
+    navigation.push("Detail", { id });
+  };
+
+  if (loading) {
+    return <FullScreenLoadingIndicator />;
+  }
+
+  
+
+  return (
+    <Screen
+      style={{backgroundColor: "#161723"}}
+    >
+      <FlatList
+      showsHorizontalScrollIndicator={false}
+        style={{ flex: 1}}
+        data={data}
+        keyExtractor={(item) => item.id}
+        ItemSeparatorComponent={ItemSeparatorComponent}
+
+        renderItem={({ item }) => {
+          return (
+            <GameRow
+              game={item}
+              isPredicted={true}
+              onPress={handlePressGameRow}
+              style={{marginBottom: "30px"}}
+            />
+          );
+        }}
+      />
+    </Screen>
+  );
+}
+export const HistoryNavigator = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        animationEnabled: true,
+        cardStyleInterpolator: forSlide,
+      }}
+    >
+      <Stack.Screen
+        name="List"
+        component={HistoryList}
+        options={{ 
+          title: "History",
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+        }}
+      />
+      </Stack.Navigator>
+      )}

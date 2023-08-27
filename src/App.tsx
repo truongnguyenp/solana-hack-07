@@ -10,13 +10,16 @@ import { HomeScreen, TokenInfoChartNavigator } from './screens/HomeNavigator';
 import { ChartEsportcast } from './screens/ChartEsportcast'
 import { TokenListNavigator } from './screens/TokenNavigator';
 import { NftScreen } from './screens/NftScreen';
+
+import { AntDesign } from '@expo/vector-icons'; 
+
 import XnftContextProvider, {
   IFRAME_ORIGIN,
   useXnft,
 } from './provider/XnftProvider';
 import tw from 'twrnc';
 import { useTheme } from './hooks/useTheme';
-import DecisionHistoryScreen from './screens/History';
+import { HistoryNavigator} from './screens/History';
 
 const Tab = createBottomTabNavigator();
 
@@ -125,8 +128,9 @@ function TabNavigator() {
       />
           <Tab.Screen
         name="History"
-        component={DecisionHistoryScreen}
+        component={HistoryNavigator}
         options={{
+          headerShown: false,
           tabBarLabel: 'History',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="history" color={color} size={size} />

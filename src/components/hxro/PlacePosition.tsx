@@ -64,7 +64,6 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
 			).then(
 				(res) => {
 					showSuccessMessage()
-					console.log("ok")
 				}
 			)
 		};
