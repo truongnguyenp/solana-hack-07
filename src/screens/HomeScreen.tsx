@@ -29,44 +29,44 @@ export function HomeScreen() {
     }
   } = {
     'DK64rmGSZupv1dLYn57e3pUVgs9jL9EKLXDVZZPsMDz8': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'SKT_DWG',
+      symbol: require('../../assets/teamLogo/SKT.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'FXdxsZhNYGSBdne2LZ448SJ1QDXk8KaEzvKivCvc38h3': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'SKT_IG',
+      symbol: require('../../assets/teamLogo/SKT.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '7XBMMSWMfXwshMWoPj7CL2WxudW5dY6UZCUVc3dDjaEG': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'FNC_TL',
+      symbol: require('../../assets/teamLogo/FNC.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'HNtzvJgduuyNsFDnqH4GyHDqNQJShJMxzUcGnUW9xeWi': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'G2_DWG',
+      symbol: require('../../assets/teamLogo/G2.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '41QaQpUGPqLkDVae3cVxesZeZRh82G6ZpSaX86x5w8bk': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'RNG_TL',
+      symbol: require('../../assets/teamLogo/RNG.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '8q7a4FpN9Di6TtT8RDbyZbwz1qmiKwmhNALRstQCbN4K': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'C9_SKT',
+      symbol: require('../../assets/teamLogo/C9.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'GTFBBcnRCT6Pa7rxDQHyYW4KMMebvkhB17dKBRkcHw78': {
-      name: 'SKT',
-      symbol: 'SKT',
+      name: 'IG_TL',
+      symbol: require('../../assets/teamLogo/IG.png'),
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     }
@@ -77,11 +77,8 @@ export function HomeScreen() {
   const filterFakeTokenByAddress = (tokens: TokenInfo[]) => {
     const listTokensBetting = tokens.filter(token => listFakeTokensAddress.includes(token.address))
     const updatedTokens: TokenInfo[] = listTokensBetting.map(tokenBetting => {
-      if (tokenBetting.address in fakeSymbolAndNameToken) {
-        const { name, symbol } = fakeSymbolAndNameToken[tokenBetting.address];
-        return { ...tokenBetting, name, symbol };
-      }
-      return tokenBetting;
+      const { name, symbol } = fakeSymbolAndNameToken[tokenBetting.address];
+      return { ...tokenBetting, name, symbol};
     });
 
     return updatedTokens;
@@ -110,7 +107,7 @@ export function HomeScreen() {
 
         renderItem={({ item }) => {
           return (
-            <TokenCardInfo 
+            <TokenCardInfo
               tokenInfo={item}
             />
           );
@@ -131,7 +128,7 @@ export function TokenInfoChartNavigator() {
       <Stack.Screen
         name="tokenInfoList"
         component={HomeScreen}
-        options={{ 
+        options={{
           title: "Battles",
           headerStyle: {
             backgroundColor: "#161723",
@@ -146,13 +143,15 @@ export function TokenInfoChartNavigator() {
       <Stack.Screen
         name="Detail"
         component={ChartEsportcast}
-       
-        options={{ title: "Predicting game detail",   headerStyle: {
-          backgroundColor: "#161723",
-        },  headerTitleStyle: {
-          color: "white",
-          // Add other title style properties as needed
-        }, }}
+
+        options={{
+          title: "Predicting game detail", headerStyle: {
+            backgroundColor: "#161723",
+          }, headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+        }}
       />
     </Stack.Navigator>
   )
