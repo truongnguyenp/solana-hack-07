@@ -39,44 +39,44 @@ export function HomeScreen({ navigation }: NativeStackScreenProps<RootStackParam
     }
   } = {
     'DK64rmGSZupv1dLYn57e3pUVgs9jL9EKLXDVZZPsMDz8': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [23, 23, 24, 48, 135, 147, 260],
       totalUserBetting: [1, 5, 10, 10, 20, 23, 30]
     },
     'FXdxsZhNYGSBdne2LZ448SJ1QDXk8KaEzvKivCvc38h3': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [50, 53, 64, 78, 95, 147, 230],
       totalUserBetting: [10, 10, 13, 20, 30, 33, 40]
     },
     '7XBMMSWMfXwshMWoPj7CL2WxudW5dY6UZCUVc3dDjaEG': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [63, 83, 104, 158, 175, 247, 440],
       totalUserBetting: [1, 5, 10, 10, 20, 23, 30]
     },
     'HNtzvJgduuyNsFDnqH4GyHDqNQJShJMxzUcGnUW9xeWi': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '41QaQpUGPqLkDVae3cVxesZeZRh82G6ZpSaX86x5w8bk': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     '8q7a4FpN9Di6TtT8RDbyZbwz1qmiKwmhNALRstQCbN4K': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     },
     'GTFBBcnRCT6Pa7rxDQHyYW4KMMebvkhB17dKBRkcHw78': {
-      name: 'FAKE_NAME_HERE',
-      symbol: 'FAKE_SYMBOL_HERE',
+      name: 'SKT',
+      symbol: 'SKT',
       tokenUsage: [150, 230, 224, 218, 135, 147, 260],
       totalUserBetting: [179, 40, 124, 248, 35, 147, 80]
     }

@@ -42,7 +42,9 @@ export function PredictingScreens() {
 			}
 		}
 		>
-      <ScrollView>
+      <ScrollView
+ showsHorizontalScrollIndicator={false}
+      >
         {window.xnft.solana && (
           <Text style={tw`text-center text-white`}>
             SOL Balance: {(balance || 0).toLocaleString()}
