@@ -1,13 +1,16 @@
 import { Text, Pressable, StyleSheet, Image, View } from "react-native";
 import { Game } from "../types";
 import { Divider } from "@rneui/base";
+import { AntDesign } from '@expo/vector-icons'; 
 
 type Props = {
  game: Game;
   onPress: (id: string) => void;
+  isPredicted: boolean;
 };
 
-export function GameRow({game, onPress }: Props) {
+export function GameRow({game, onPress, isPredicted }: Props) {
+  
   return (
     <Pressable onPress={() => onPress?.(game.id)} style={styles.container}>
       <View style={{  alignItems: "center" }}>
@@ -16,15 +19,17 @@ export function GameRow({game, onPress }: Props) {
       </View>
 
       <View style={{ flexDirection: "row", alignItems: "center", gap: "4px" }}>
-      <Text style={styles.score}>{game.team1.score}</Text>
+      <Text style={styles.score}>{isPredicted? game.team1.score: "?"}</Text>
       <Text style={styles.score}> - </Text>
-      <Text style={styles.score}>{game.team2.score}</Text>
+      <Text style={styles.score}>{isPredicted? game.team2.score: "?"}</Text>
       </View>
 
       <View style={{ alignItems: "center" }}>
         <Image source={{ uri: game.team2.logo }} style={styles.image} />
         <Text style={styles.name}>{game.team2.name}</Text>
       </View>
+
+   {   isPredicted && <AntDesign name="checkcircle" size={24} color="green" />}
     </Pressable>
   );
 }
