@@ -4288,7 +4288,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@react-native-community/cli-doctor@npm:^10.2.2":
+=======
+"@react-native-community/cli-doctor@npm:^10.1.1":
+>>>>>>> Stashed changes
   version: 10.2.5
   resolution: "@react-native-community/cli-doctor@npm:10.2.5"
   dependencies:
@@ -4312,7 +4316,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@react-native-community/cli-hermes@npm:^10.2.0":
+=======
+"@react-native-community/cli-hermes@npm:^10.1.3":
+>>>>>>> Stashed changes
   version: 10.2.0
   resolution: "@react-native-community/cli-hermes@npm:10.2.0"
   dependencies:
@@ -4325,7 +4333,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@react-native-community/cli-platform-android@npm:10.2.0, @react-native-community/cli-platform-android@npm:^10.2.0":
+=======
+"@react-native-community/cli-platform-android@npm:10.1.3":
+  version: 10.1.3
+  resolution: "@react-native-community/cli-platform-android@npm:10.1.3"
+  dependencies:
+    "@react-native-community/cli-tools": ^10.1.1
+    chalk: ^4.1.2
+    execa: ^1.0.0
+    glob: ^7.1.3
+    logkitty: ^0.7.1
+  checksum: f99751d014112c265467e690f075fc4a4d179954a95bc04846f41e9984a7f2e09f401ea34030b0a544c8d8c0fc10f81614328766f8b208974ae06d2fd1e44fb0
+  languageName: node
+  linkType: hard
+
+"@react-native-community/cli-platform-android@npm:^10.2.0":
+>>>>>>> Stashed changes
   version: 10.2.0
   resolution: "@react-native-community/cli-platform-android@npm:10.2.0"
   dependencies:
@@ -4338,17 +4363,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@react-native-community/cli-platform-ios@npm:10.2.1":
   version: 10.2.1
   resolution: "@react-native-community/cli-platform-ios@npm:10.2.1"
+=======
+"@react-native-community/cli-platform-ios@npm:10.1.1":
+  version: 10.1.1
+  resolution: "@react-native-community/cli-platform-ios@npm:10.1.1"
+>>>>>>> Stashed changes
   dependencies:
     "@react-native-community/cli-tools": ^10.1.1
     chalk: ^4.1.2
     execa: ^1.0.0
+<<<<<<< Updated upstream
     fast-xml-parser: ^4.0.12
     glob: ^7.1.3
     ora: ^5.4.1
   checksum: 17228084eb482dd769eaf872b779be9d901f28645b6888915646a7dd002f9c3317fd92a3b9d3a7744fa8580155aea1b1225a56642e4f31581970ae39a9a12b83
+=======
+    glob: ^7.1.3
+    ora: ^5.4.1
+  checksum: 2cc5cffeacfea9d79cba89ca807ce0de76fac80217031975d4f392f21d5a4b49330d6d6bf27915e33239e51d9c2f2e7ad19bfec893981b9c90eb6d10a6806041
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -4366,7 +4403,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@react-native-community/cli-plugin-metro@npm:^10.2.2":
+=======
+"@react-native-community/cli-plugin-metro@npm:^10.1.1":
+>>>>>>> Stashed changes
   version: 10.2.3
   resolution: "@react-native-community/cli-plugin-metro@npm:10.2.3"
   dependencies:
@@ -4428,16 +4469,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@react-native-community/cli@npm:10.2.2":
   version: 10.2.2
   resolution: "@react-native-community/cli@npm:10.2.2"
+=======
+"@react-native-community/cli@npm:10.1.3":
+  version: 10.1.3
+  resolution: "@react-native-community/cli@npm:10.1.3"
+>>>>>>> Stashed changes
   dependencies:
     "@react-native-community/cli-clean": ^10.1.1
     "@react-native-community/cli-config": ^10.1.1
     "@react-native-community/cli-debugger-ui": ^10.0.0
+<<<<<<< Updated upstream
     "@react-native-community/cli-doctor": ^10.2.2
     "@react-native-community/cli-hermes": ^10.2.0
     "@react-native-community/cli-plugin-metro": ^10.2.2
+=======
+    "@react-native-community/cli-doctor": ^10.1.1
+    "@react-native-community/cli-hermes": ^10.1.3
+    "@react-native-community/cli-plugin-metro": ^10.1.1
+>>>>>>> Stashed changes
     "@react-native-community/cli-server-api": ^10.1.1
     "@react-native-community/cli-tools": ^10.1.1
     "@react-native-community/cli-types": ^10.0.0
@@ -4451,7 +4504,11 @@ __metadata:
     semver: ^6.3.0
   bin:
     react-native: build/bin.js
+<<<<<<< Updated upstream
   checksum: f3c498c8cc660c53a75cfb8522748a26b589fa087d13a03225cd207dad61c592dfa59ebc26e5d9caf8cb210b8802922bc4a3c907e180273027bc738ee7cc6038
+=======
+  checksum: cf542a8fe0f0b589c0dfa19df1ebd0aa8924c6438a36b11560ee727543bbe28566e80559f49ffc75262dd4ac60467ad7abb96be2ebf26f74273af13040f2df6b
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -5068,9 +5125,15 @@ __metadata:
   linkType: hard
 
 "@scure/base@npm:~1.1.0":
+<<<<<<< Updated upstream
   version: 1.1.1
   resolution: "@scure/base@npm:1.1.1"
   checksum: b4fc810b492693e7e8d0107313ac74c3646970c198bbe26d7332820886fa4f09441991023ec9aa3a2a51246b74409ab5ebae2e8ef148bbc253da79ac49130309
+=======
+  version: 1.1.2
+  resolution: "@scure/base@npm:1.1.2"
+  checksum: f666b09dbd62ecb5fe6d0e7a629c8a86a972a47dc4f4555ebbbd7b09782b10a5f894fed9c3b8c74fd683b1588c064df079a44e9f695c075ccd98c30a8d3e91f7
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -5132,6 +5195,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"@shopify/react-native-skia@npm:^0.1.202":
+  version: 0.1.202
+  resolution: "@shopify/react-native-skia@npm:0.1.202"
+  dependencies:
+    canvaskit-wasm: 0.38.0
+    react-reconciler: ^0.27.0
+  peerDependencies:
+    react: ">=18.0"
+    react-native: ">=0.64"
+    react-native-reanimated: ">=2.0.0"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-reanimated:
+      optional: true
+  bin:
+    setup-skia-web: scripts/setup-canvaskit.js
+  checksum: 264dcf6b688d77cde9a4b49d99129da607db5b44d668a0977c6b176a39977f4a7f85d876ee6059f15bf07d693e52388e53349297d73b682ef3a2885652adee03
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "@sideway/address@npm:^4.1.3":
   version: 4.1.4
   resolution: "@sideway/address@npm:4.1.4"
@@ -6213,7 +6300,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "@xmldom/xmldom@npm:^0.8.8":
+=======
+"@wuba/react-native-echarts@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@wuba/react-native-echarts@npm:1.2.3"
+  dependencies:
+    "@xmldom/xmldom": ^0.8.6
+    entities: ^4.4.0
+  peerDependencies:
+    "@shopify/react-native-skia": "*"
+    echarts: "*"
+    react: "*"
+    react-native: "*"
+    react-native-gesture-handler: "*"
+    react-native-svg: "*"
+    zrender: "*"
+  checksum: effdb9c9d45c585295653e34ab3671a1c95ee61dcc1d537b575d1fd15cb71d7c3d0a558e440587b954450342b28d59e7b7320c0dc17b278aa7358808d1a660fd
+  languageName: node
+  linkType: hard
+
+"@xmldom/xmldom@npm:^0.8.6, @xmldom/xmldom@npm:^0.8.8":
+>>>>>>> Stashed changes
   version: 0.8.10
   resolution: "@xmldom/xmldom@npm:0.8.10"
   checksum: 4c136aec31fb3b49aaa53b6fcbfe524d02a1dc0d8e17ee35bd3bf35e9ce1344560481cd1efd086ad1a4821541482528672306d5e37cdbd187f33d7fadd3e2cf0
@@ -8044,6 +8153,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"canvaskit-wasm@npm:0.38.0":
+  version: 0.38.0
+  resolution: "canvaskit-wasm@npm:0.38.0"
+  checksum: 5a743d7623187949241e1b18aa2bb43016dc837fa903594921afed4afb6b58032bccf81a30cdf71e23f185fc3827864f8ce780799c38de5325492a0fe2425e4e
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "capability@npm:^0.2.5":
   version: 0.2.5
   resolution: "capability@npm:0.2.5"
@@ -8899,6 +9018,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"css-select@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "css-select@npm:5.1.0"
+  dependencies:
+    boolbase: ^1.0.0
+    css-what: ^6.1.0
+    domhandler: ^5.0.2
+    domutils: ^3.0.1
+    nth-check: ^2.0.1
+  checksum: 2772c049b188d3b8a8159907192e926e11824aea525b8282981f72ba3f349cf9ecd523fdf7734875ee2cb772246c22117fc062da105b6d59afe8dcd5c99c9bda
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "css-tree@npm:^1.1.2, css-tree@npm:^1.1.3":
   version: 1.1.3
   resolution: "css-tree@npm:1.1.3"
@@ -8919,7 +9054,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "css-what@npm:^6.0.1":
+=======
+"css-what@npm:^6.0.1, css-what@npm:^6.1.0":
+>>>>>>> Stashed changes
   version: 6.1.0
   resolution: "css-what@npm:6.1.0"
   checksum: b975e547e1e90b79625918f84e67db5d33d896e6de846c9b584094e529f0c63e2ab85ee33b9daffd05bff3a146a1916bec664e18bb76dd5f66cbff9fc13b2bbe
@@ -9019,6 +9158,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "csv-generate@npm:^4.2.7":
   version: 4.2.7
   resolution: "csv-generate@npm:4.2.7"
@@ -9037,10 +9177,31 @@ __metadata:
   version: 6.4.1
   resolution: "csv-stringify@npm:6.4.1"
   checksum: e7d0bcd2d7c246bb69b16a625471c83251fa5ddfe947150805c8782917d2765e65462719c32c6f89e392fe6182525c36e07d2b49dbab42325e4e6c648540d05c
+=======
+"csv-generate@npm:^4.2.8":
+  version: 4.2.8
+  resolution: "csv-generate@npm:4.2.8"
+  checksum: 0aabbe20ffba8681c1d5c3ae35010304eb63cb42534204e8c218dfedcfbe53956501c6a866c5cd896caaa6eaa6eab6bd2f1779e39f2126cb05ce7563cfff15bf
+  languageName: node
+  linkType: hard
+
+"csv-parse@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "csv-parse@npm:5.5.0"
+  checksum: a9cc73a332debdabe9658c532e7668c626c06616113b650fb2e063f3a1451d45a48080c1942a680e8ddeaf1665efef49f126e655c54c19e025d70cccc002ff4d
+  languageName: node
+  linkType: hard
+
+"csv-stringify@npm:^6.4.2":
+  version: 6.4.2
+  resolution: "csv-stringify@npm:6.4.2"
+  checksum: de8f394634e9745e0bc50d25312125204ca492a945f3e892af63cc340d371fdf653120c6bf2ff8ec2c9ce86b09e8455d7b5267cf91c7278e81a5f8c1b100105f
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
 "csv@npm:^6.0.5":
+<<<<<<< Updated upstream
   version: 6.3.2
   resolution: "csv@npm:6.3.2"
   dependencies:
@@ -9049,6 +9210,16 @@ __metadata:
     csv-stringify: ^6.4.1
     stream-transform: ^3.2.7
   checksum: 830e28a98663541bb6d9d148ac1240043b2f7f22f384ba46c9a2c1012b3f8331b23b109b5e5ba46114241d327f6f98653a76edb35a3d6633153d6678d8c7fe5a
+=======
+  version: 6.3.3
+  resolution: "csv@npm:6.3.3"
+  dependencies:
+    csv-generate: ^4.2.8
+    csv-parse: ^5.5.0
+    csv-stringify: ^6.4.2
+    stream-transform: ^3.2.8
+  checksum: e5f268305957a4cc8b2936fd305f6fe0d097b93959ef1d0bd5081f4fc59ac02c3d842cdaaea5304073ac2de985c3931aa3e4b924ebd4fba48b0efc29c5287902
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -9470,11 +9641,19 @@ __metadata:
   linkType: hard
 
 "dns-packet@npm:^5.2.2":
+<<<<<<< Updated upstream
   version: 5.6.0
   resolution: "dns-packet@npm:5.6.0"
   dependencies:
     "@leichtgewicht/ip-codec": ^2.0.1
   checksum: 1b643814e5947a87620f8a906287079347492282964ce1c236d52c414e3e3941126b96581376b180ba6e66899e70b86b587bc1aa23e3acd9957765be952d83fc
+=======
+  version: 5.6.1
+  resolution: "dns-packet@npm:5.6.1"
+  dependencies:
+    "@leichtgewicht/ip-codec": ^2.0.1
+  checksum: 64c06457f0c6e143f7a0946e0aeb8de1c5f752217cfa143ef527467c00a6d78db1835cfdb6bb68333d9f9a4963cf23f410439b5262a8935cce1236f45e344b81
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -9526,6 +9705,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"dom-serializer@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "dom-serializer@npm:2.0.0"
+  dependencies:
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.2
+    entities: ^4.2.0
+  checksum: cd1810544fd8cdfbd51fa2c0c1128ec3a13ba92f14e61b7650b5de421b88205fd2e3f0cc6ace82f13334114addb90ed1c2f23074a51770a8e9c1273acbc7f3e6
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "domain-browser@npm:^4.22.0":
   version: 4.22.0
   resolution: "domain-browser@npm:4.22.0"
@@ -9533,7 +9726,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0":
+=======
+"domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0, domelementtype@npm:^2.3.0":
+>>>>>>> Stashed changes
   version: 2.3.0
   resolution: "domelementtype@npm:2.3.0"
   checksum: ee837a318ff702622f383409d1f5b25dd1024b692ef64d3096ff702e26339f8e345820f29a68bcdcea8cfee3531776b3382651232fbeae95612d6f0a75efb4f6
@@ -9549,6 +9746,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"domhandler@npm:^5.0.2, domhandler@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "domhandler@npm:5.0.3"
+  dependencies:
+    domelementtype: ^2.3.0
+  checksum: 0f58f4a6af63e6f3a4320aa446d28b5790a009018707bce2859dcb1d21144c7876482b5188395a188dfa974238c019e0a1e610d2fc269a12b2c192ea2b0b131c
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "domutils@npm:^2.5.2, domutils@npm:^2.8.0":
   version: 2.8.0
   resolution: "domutils@npm:2.8.0"
@@ -9560,6 +9769,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"domutils@npm:^3.0.1":
+  version: 3.1.0
+  resolution: "domutils@npm:3.1.0"
+  dependencies:
+    dom-serializer: ^2.0.0
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.3
+  checksum: e5757456ddd173caa411cfc02c2bb64133c65546d2c4081381a3bafc8a57411a41eed70494551aa58030be9e58574fcc489828bebd673863d39924fb4878f416
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "dot-case@npm:^3.0.4":
   version: 3.0.4
   resolution: "dot-case@npm:3.0.4"
@@ -9629,6 +9852,19 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"echarts@npm:^5.4.3":
+  version: 5.4.3
+  resolution: "echarts@npm:5.4.3"
+  dependencies:
+    tslib: 2.3.0
+    zrender: 5.4.4
+  checksum: f4f69becf1cf8f546f9488ffa3bffaa971dcfbd49f5d635f288cbc8c5177839154bd6c325d6ed72c2b822c89c9bba4947ac73400614fd23c6f2f7ace3c939132
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "ee-first@npm:1.1.1":
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
@@ -9637,9 +9873,15 @@ download-git-repo@latest:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.477":
+<<<<<<< Updated upstream
   version: 1.4.502
   resolution: "electron-to-chromium@npm:1.4.502"
   checksum: 69b63eaed50c951c371b1bd907c6775275d170adbdc6b6091b961a78766f5e223b17823afbbc5984c843addac06a5348d3b14acbcf5a746f871ca8cdee6caeba
+=======
+  version: 1.4.503
+  resolution: "electron-to-chromium@npm:1.4.503"
+  checksum: 77198f5d4365931fb6f18670f1cc2bc6833516dfe935e69209da45ba06fd9e3bb02678216ab8c1cf7b047655559b7d591d922d9a781a1f91c7f5a32d5f51f778
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -9731,6 +9973,16 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"entities@npm:^4.2.0, entities@npm:^4.4.0":
+  version: 4.5.0
+  resolution: "entities@npm:4.5.0"
+  checksum: 853f8ebd5b425d350bffa97dd6958143179a5938352ccae092c62d1267c4e392a039be1bae7d51b6e4ffad25f51f9617531fedf5237f15df302ccfb452cbf2d7
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "env-editor@npm:^0.4.1":
   version: 0.4.2
   resolution: "env-editor@npm:0.4.2"
@@ -11234,6 +11486,7 @@ download-git-repo@latest:
   linkType: hard
 
 "flat-cache@npm:^3.0.4":
+<<<<<<< Updated upstream
   version: 3.0.4
   resolution: "flat-cache@npm:3.0.4"
   dependencies:
@@ -11244,6 +11497,19 @@ download-git-repo@latest:
   linkType: hard
 
 "flatted@npm:^3.1.0":
+=======
+  version: 3.1.0
+  resolution: "flat-cache@npm:3.1.0"
+  dependencies:
+    flatted: ^3.2.7
+    keyv: ^4.5.3
+    rimraf: ^3.0.2
+  checksum: 99312601d5b90f44aef403f17f056dc09be7e437703740b166cdc9386d99e681f74e6b6e8bd7d010bda66904ea643c9527276b1b80308a2119741d94108a4d8f
+  languageName: node
+  linkType: hard
+
+"flatted@npm:^3.2.7":
+>>>>>>> Stashed changes
   version: 3.2.7
   resolution: "flatted@npm:3.2.7"
   checksum: 427633049d55bdb80201c68f7eb1cbd533e03eac541f97d3aecab8c5526f12a20ccecaeede08b57503e772c769e7f8680b37e8d482d1e5f8d7e2194687f9ea35
@@ -13843,7 +14109,11 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "keyv@npm:^4.0.0":
+=======
+"keyv@npm:^4.0.0, keyv@npm:^4.5.3":
+>>>>>>> Stashed changes
   version: 4.5.3
   resolution: "keyv@npm:4.5.3"
   dependencies:
@@ -14420,6 +14690,7 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "metro-babel-transformer@npm:0.73.9":
   version: 0.73.9
   resolution: "metro-babel-transformer@npm:0.73.9"
@@ -14429,6 +14700,17 @@ download-git-repo@latest:
     metro-source-map: 0.73.9
     nullthrows: ^1.1.1
   checksum: a136f110bdd5661d3e0cc9ff5399a480151205e91f7ce735820c4df0eb47e0d002496ceeed497799045b4c9695a63ce9d0b8235ad6844dd3854d9e5337f74627
+=======
+"metro-babel-transformer@npm:0.73.7":
+  version: 0.73.7
+  resolution: "metro-babel-transformer@npm:0.73.7"
+  dependencies:
+    "@babel/core": ^7.20.0
+    hermes-parser: 0.8.0
+    metro-source-map: 0.73.7
+    nullthrows: ^1.1.1
+  checksum: 9b591af61ae33f6bc5197e1c2ac3dc4bc97fb02943861c43acfd41ac8020e116a2ff92263416b1a67a477dcfa2bd99a53d820c44b5333b15fc6c24daad2e14e3
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -14585,6 +14867,57 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"metro-react-native-babel-preset@npm:0.73.7":
+  version: 0.73.7
+  resolution: "metro-react-native-babel-preset@npm:0.73.7"
+  dependencies:
+    "@babel/core": ^7.20.0
+    "@babel/plugin-proposal-async-generator-functions": ^7.0.0
+    "@babel/plugin-proposal-class-properties": ^7.0.0
+    "@babel/plugin-proposal-export-default-from": ^7.0.0
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.0.0
+    "@babel/plugin-proposal-object-rest-spread": ^7.0.0
+    "@babel/plugin-proposal-optional-catch-binding": ^7.0.0
+    "@babel/plugin-proposal-optional-chaining": ^7.0.0
+    "@babel/plugin-syntax-dynamic-import": ^7.0.0
+    "@babel/plugin-syntax-export-default-from": ^7.0.0
+    "@babel/plugin-syntax-flow": ^7.18.0
+    "@babel/plugin-syntax-nullish-coalescing-operator": ^7.0.0
+    "@babel/plugin-syntax-optional-chaining": ^7.0.0
+    "@babel/plugin-transform-arrow-functions": ^7.0.0
+    "@babel/plugin-transform-async-to-generator": ^7.0.0
+    "@babel/plugin-transform-block-scoping": ^7.0.0
+    "@babel/plugin-transform-classes": ^7.0.0
+    "@babel/plugin-transform-computed-properties": ^7.0.0
+    "@babel/plugin-transform-destructuring": ^7.0.0
+    "@babel/plugin-transform-flow-strip-types": ^7.0.0
+    "@babel/plugin-transform-function-name": ^7.0.0
+    "@babel/plugin-transform-literals": ^7.0.0
+    "@babel/plugin-transform-modules-commonjs": ^7.0.0
+    "@babel/plugin-transform-named-capturing-groups-regex": ^7.0.0
+    "@babel/plugin-transform-parameters": ^7.0.0
+    "@babel/plugin-transform-react-display-name": ^7.0.0
+    "@babel/plugin-transform-react-jsx": ^7.0.0
+    "@babel/plugin-transform-react-jsx-self": ^7.0.0
+    "@babel/plugin-transform-react-jsx-source": ^7.0.0
+    "@babel/plugin-transform-runtime": ^7.0.0
+    "@babel/plugin-transform-shorthand-properties": ^7.0.0
+    "@babel/plugin-transform-spread": ^7.0.0
+    "@babel/plugin-transform-sticky-regex": ^7.0.0
+    "@babel/plugin-transform-template-literals": ^7.0.0
+    "@babel/plugin-transform-typescript": ^7.5.0
+    "@babel/plugin-transform-unicode-regex": ^7.0.0
+    "@babel/template": ^7.0.0
+    react-refresh: ^0.4.0
+  peerDependencies:
+    "@babel/core": "*"
+  checksum: 059fa87ed3890e9378c619d6b546387056637d78df82f11c29e4966ba915faa16f721d7e71f47dc98290b94a45d360d6e4ee7d71a6c2b952aa7f55f515b0a9d2
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "metro-react-native-babel-preset@npm:0.73.9":
   version: 0.73.9
   resolution: "metro-react-native-babel-preset@npm:0.73.9"
@@ -14650,13 +14983,20 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "metro-react-native-babel-transformer@npm:0.73.9":
   version: 0.73.9
   resolution: "metro-react-native-babel-transformer@npm:0.73.9"
+=======
+"metro-react-native-babel-transformer@npm:0.73.7":
+  version: 0.73.7
+  resolution: "metro-react-native-babel-transformer@npm:0.73.7"
+>>>>>>> Stashed changes
   dependencies:
     "@babel/core": ^7.20.0
     babel-preset-fbjs: ^3.4.0
     hermes-parser: 0.8.0
+<<<<<<< Updated upstream
     metro-babel-transformer: 0.73.9
     metro-react-native-babel-preset: 0.73.9
     metro-source-map: 0.73.9
@@ -14664,6 +15004,15 @@ download-git-repo@latest:
   peerDependencies:
     "@babel/core": "*"
   checksum: f54224a1b851ccb939ef71763b802ef35d5af70fb571cf4b61477a75a357000a07bd7ea5b900402eb718586af4dfd1aaa2b433757167882642bf3beb66e980e0
+=======
+    metro-babel-transformer: 0.73.7
+    metro-react-native-babel-preset: 0.73.7
+    metro-source-map: 0.73.7
+    nullthrows: ^1.1.1
+  peerDependencies:
+    "@babel/core": "*"
+  checksum: 5d2e4cfcb8aa161aa167962658c5beef9c958ecc3ee1905292404df5ac4449a9b306179696315a5169c03174c460eaece5748aed3f7d9af8622271fec9288d84
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -14686,6 +15035,7 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "metro-runtime@npm:0.73.9":
   version: 0.73.9
   resolution: "metro-runtime@npm:0.73.9"
@@ -14693,6 +15043,15 @@ download-git-repo@latest:
     "@babel/runtime": ^7.0.0
     react-refresh: ^0.4.0
   checksum: b6afd195fe0f99281d6a71e4b742545de62b8f54b0731bb79da55b98b30561a807f90f46e96469aa96dec720bac3153e51741c038d0d9171e4c395aeda62ae4a
+=======
+"metro-runtime@npm:0.73.7":
+  version: 0.73.7
+  resolution: "metro-runtime@npm:0.73.7"
+  dependencies:
+    "@babel/runtime": ^7.0.0
+    react-refresh: ^0.4.0
+  checksum: c9e269816fdf6a845ac774b5b3e263c70896c3df6931f336dc780189f12b779fe384bafa2b062809d1e3360a4aa0d720268328ac6fe58d969a0e8d3e06a78612
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -14712,19 +15071,34 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "metro-source-map@npm:0.73.9":
   version: 0.73.9
   resolution: "metro-source-map@npm:0.73.9"
+=======
+"metro-source-map@npm:0.73.7":
+  version: 0.73.7
+  resolution: "metro-source-map@npm:0.73.7"
+>>>>>>> Stashed changes
   dependencies:
     "@babel/traverse": ^7.20.0
     "@babel/types": ^7.20.0
     invariant: ^2.2.4
+<<<<<<< Updated upstream
     metro-symbolicate: 0.73.9
     nullthrows: ^1.1.1
     ob1: 0.73.9
     source-map: ^0.5.6
     vlq: ^1.0.0
   checksum: 289db0ddacebbeeea0d126018978476f8da3ec4646e196b873d4e35ff8c3f1d3e409110b008637d52d7aee4dda0d7ca0b2e1bf8f1944e0a015ef6f1189d1f7d0
+=======
+    metro-symbolicate: 0.73.7
+    nullthrows: ^1.1.1
+    ob1: 0.73.7
+    source-map: ^0.5.6
+    vlq: ^1.0.0
+  checksum: d12366f95b1038f25ed1f685a948fcdc626886d946bb870f71231fff12a74600506a7ea49aa564a024cf691861b015780f017f9ca854a9d47fbfbff9ff821399
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -14744,19 +15118,32 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "metro-symbolicate@npm:0.73.9":
   version: 0.73.9
   resolution: "metro-symbolicate@npm:0.73.9"
   dependencies:
     invariant: ^2.2.4
     metro-source-map: 0.73.9
+=======
+"metro-symbolicate@npm:0.73.7":
+  version: 0.73.7
+  resolution: "metro-symbolicate@npm:0.73.7"
+  dependencies:
+    invariant: ^2.2.4
+    metro-source-map: 0.73.7
+>>>>>>> Stashed changes
     nullthrows: ^1.1.1
     source-map: ^0.5.6
     through2: ^2.0.1
     vlq: ^1.0.0
   bin:
     metro-symbolicate: src/index.js
+<<<<<<< Updated upstream
   checksum: 056ea58297a63fb613df3580cba0a338b9dfc3c7e5f1c3e1cd4997c69d3d8476d53ca5127baa557de61bffa0feee9b383f18a7bc776e5677df729382ee874a31
+=======
+  checksum: 0f87e150ecc44dc0b4630c626c8fe50a0445053f6b9000df821771349168ef7816e7e232298b9751ee7f2d6e51a4dc756da115fb3fdc23b1a3d6bb5e17487e07
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -15417,13 +15804,22 @@ download-git-repo@latest:
   linkType: hard
 
 "node-gyp-build@npm:^4.2.0, node-gyp-build@npm:^4.3.0":
+<<<<<<< Updated upstream
   version: 4.6.0
   resolution: "node-gyp-build@npm:4.6.0"
+=======
+  version: 4.6.1
+  resolution: "node-gyp-build@npm:4.6.1"
+>>>>>>> Stashed changes
   bin:
     node-gyp-build: bin.js
     node-gyp-build-optional: optional.js
     node-gyp-build-test: build-test.js
+<<<<<<< Updated upstream
   checksum: 25d78c5ef1f8c24291f4a370c47ba52fcea14f39272041a90a7894cd50d766f7c8cb8fb06c0f42bf6f69b204b49d9be3c8fc344aac09714d5bdb95965499eb15
+=======
+  checksum: c3676d337b36803bc7792e35bf7fdcda7cdcb7e289b8f9855a5535702a82498eb976842fefcf487258c58005ca32ce3d537fbed91280b04409161dcd7232a882
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -15651,10 +16047,17 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "ob1@npm:0.73.9":
   version: 0.73.9
   resolution: "ob1@npm:0.73.9"
   checksum: 6f45eeb21ca426259f8edb21a68127b3ec85bd1b01c00f3637c077f20fca32a428d19038aa09f1cfbe1f4eb0df5fdcfb9de90523b00bc9b99f129853584e20c1
+=======
+"ob1@npm:0.73.7":
+  version: 0.73.7
+  resolution: "ob1@npm:0.73.7"
+  checksum: 47fb8d4ad6893cfa49a307242646c82edb6a3a1e405785a33de4330d2f70179811deef675388bf496b10099c0cdda139b198efce8810b5f5bc1159e6850bef16
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -17268,7 +17671,11 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "react-native-gradle-plugin@npm:^0.71.18":
+=======
+"react-native-gradle-plugin@npm:^0.71.15":
+>>>>>>> Stashed changes
   version: 0.71.19
   resolution: "react-native-gradle-plugin@npm:0.71.19"
   checksum: 2e3ab679f0b81edd81b9fb88a73a16c8b9b6dbef4e7158fd894c42e6dff04ba8d11f1b9663ffa2c30d0d9deee3cd44b033cd280322c010be3c290e4422088a7a
@@ -17319,6 +17726,22 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"react-native-svg@npm:^13.13.0":
+  version: 13.13.0
+  resolution: "react-native-svg@npm:13.13.0"
+  dependencies:
+    css-select: ^5.1.0
+    css-tree: ^1.1.3
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 533365186d868f8220dc9c247cc7f8a4e1b6ff73bd9530e5feff1bac9157225bae683f2cc148f00210080f29e02f5b2f673b536198d456e69870748e4e2b8998
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "react-native-vector-icons@npm:^10.0.0":
   version: 10.0.0
   resolution: "react-native-vector-icons@npm:10.0.0"
@@ -17352,6 +17775,7 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "react-native@npm:0.71.8":
   version: 0.71.8
   resolution: "react-native@npm:0.71.8"
@@ -17360,6 +17784,16 @@ download-git-repo@latest:
     "@react-native-community/cli": 10.2.2
     "@react-native-community/cli-platform-android": 10.2.0
     "@react-native-community/cli-platform-ios": 10.2.1
+=======
+"react-native@npm:0.71.3":
+  version: 0.71.3
+  resolution: "react-native@npm:0.71.3"
+  dependencies:
+    "@jest/create-cache-key-function": ^29.2.1
+    "@react-native-community/cli": 10.1.3
+    "@react-native-community/cli-platform-android": 10.1.3
+    "@react-native-community/cli-platform-ios": 10.1.1
+>>>>>>> Stashed changes
     "@react-native/assets": 1.0.0
     "@react-native/normalize-color": 2.1.0
     "@react-native/polyfills": 2.0.0
@@ -17372,16 +17806,26 @@ download-git-repo@latest:
     jest-environment-node: ^29.2.1
     jsc-android: ^250231.0.0
     memoize-one: ^5.0.0
+<<<<<<< Updated upstream
     metro-react-native-babel-transformer: 0.73.9
     metro-runtime: 0.73.9
     metro-source-map: 0.73.9
+=======
+    metro-react-native-babel-transformer: 0.73.7
+    metro-runtime: 0.73.7
+    metro-source-map: 0.73.7
+>>>>>>> Stashed changes
     mkdirp: ^0.5.1
     nullthrows: ^1.1.1
     pretty-format: ^26.5.2
     promise: ^8.3.0
     react-devtools-core: ^4.26.1
     react-native-codegen: ^0.71.5
+<<<<<<< Updated upstream
     react-native-gradle-plugin: ^0.71.18
+=======
+    react-native-gradle-plugin: ^0.71.15
+>>>>>>> Stashed changes
     react-refresh: ^0.4.0
     react-shallow-renderer: ^16.15.0
     regenerator-runtime: ^0.13.2
@@ -17394,7 +17838,23 @@ download-git-repo@latest:
     react: 18.2.0
   bin:
     react-native: cli.js
+<<<<<<< Updated upstream
   checksum: fe887c1b8bded23f9efea9dc10a8a8b2f32147e06418fc9a78294944874797abb0185ebcb0fdc5ce88046280bca72264ae8d119f4ca681a3e0bc502d0f75bfbe
+=======
+  checksum: 1f6cee37352db4981eadee3e07b04f19d4ad3eeebf2ede7e8d98d42c87ea6041ec3e5703038349c650148fadb1bfab3db0c52121620fd946d9cf4a47b130b715
+  languageName: node
+  linkType: hard
+
+"react-reconciler@npm:^0.27.0":
+  version: 0.27.0
+  resolution: "react-reconciler@npm:0.27.0"
+  dependencies:
+    loose-envify: ^1.1.0
+    scheduler: ^0.21.0
+  peerDependencies:
+    react: ^18.0.0
+  checksum: c2ae111f150c2a46970182df12ea8254719fdfec5e26574711b1838fc37863c63671460a351570fd359c088d891e7bb0ff89023c2f7c1582393b57dd517b92c2
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -17996,13 +18456,25 @@ download-git-repo@latest:
     "@react-navigation/stack": 6.2.1
     "@rneui/base": ^4.0.0-rc.8
     "@rneui/themed": ^4.0.0-rc.8
+<<<<<<< Updated upstream
+=======
+    "@shopify/react-native-skia": ^0.1.202
+>>>>>>> Stashed changes
     "@solana/spl-token": 0.1.8
     "@solana/web3.js": ^1.73.0
     "@types/react": ~18.0.28
     "@types/react-native": ~0.71.3
+<<<<<<< Updated upstream
     bs58: ^5.0.0
     buffer: ^6.0.3
     commander: ^9.4.1
+=======
+    "@wuba/react-native-echarts": ^1.2.3
+    bs58: ^5.0.0
+    buffer: ^6.0.3
+    commander: ^9.4.1
+    echarts: ^5.4.3
+>>>>>>> Stashed changes
     expo: ~48.0.7
     expo-constants: ~14.2.1
     expo-linking: ~4.0.1
@@ -18014,10 +18486,18 @@ download-git-repo@latest:
     react: 18.2.0
     react-dom: 18.2.0
     react-error-overlay: 6.0.11
+<<<<<<< Updated upstream
     react-native: 0.71.8
     react-native-gesture-handler: ~2.9.0
     react-native-safe-area-context: 4.5.0
     react-native-screens: ~3.20.0
+=======
+    react-native: 0.71.3
+    react-native-gesture-handler: ~2.9.0
+    react-native-safe-area-context: 4.5.0
+    react-native-screens: ~3.20.0
+    react-native-svg: ^13.13.0
+>>>>>>> Stashed changes
     react-native-vector-icons: ^10.0.0
     react-native-web: ~0.18.12
     recoil: "*"
@@ -18139,6 +18619,18 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"scheduler@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "scheduler@npm:0.21.0"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: 4f8285076041ed2c81acdd1faa987f1655fdbd30554bc667c1ea64743fc74fb3a04ca7d27454b3d678735df5a230137a3b84756061b43dc5796e80701b66d124
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "scheduler@npm:^0.23.0":
   version: 0.23.0
   resolution: "scheduler@npm:0.23.0"
@@ -18936,10 +19428,17 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "stream-transform@npm:^3.2.7":
   version: 3.2.7
   resolution: "stream-transform@npm:3.2.7"
   checksum: aed6d5ef3ced12d1d1985541bc2a488ba83807669efae3c800073c21652f72240278b7b65ce4a738a92b01f323b98db0256dd9a15e64f551c8f511ee854a8288
+=======
+"stream-transform@npm:^3.2.8":
+  version: 3.2.8
+  resolution: "stream-transform@npm:3.2.8"
+  checksum: 2e640d2b1d1c3be798f5f6d63ce9ee07c885d2648df052ff6863555d25f7c8f3902630585e21f5a75386ce40202ff173cf6f85e9a5610f84c83e615ff2bdc23e
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -19713,6 +20212,16 @@ download-git-repo@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
+=======
+"tslib@npm:2.3.0":
+  version: 2.3.0
+  resolution: "tslib@npm:2.3.0"
+  checksum: 8869694c26e4a7b56d449662fd54a4f9ba872c889d991202c74462bd99f10e61d5bd63199566c4284c0f742277736292a969642cc7b590f98727a7cae9529122
+  languageName: node
+  linkType: hard
+
+>>>>>>> Stashed changes
 "tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -20838,8 +21347,13 @@ download-git-repo@latest:
   linkType: hard
 
 xnft@latest:
+<<<<<<< Updated upstream
   version: 0.7.0-latest.1163
   resolution: "xnft@npm:0.7.0-latest.1163"
+=======
+  version: 0.7.0-latest.1185
+  resolution: "xnft@npm:0.7.0-latest.1185"
+>>>>>>> Stashed changes
   dependencies:
     "@coral-xyz/xnft": ^0.2.50
     "@esbuild-plugins/node-globals-polyfill": ^0.2.3
@@ -20855,7 +21369,11 @@ xnft@latest:
     node-stdlib-browser: ^1.2.0
   bin:
     xnft: index.js
+<<<<<<< Updated upstream
   checksum: 74fac50fcfc63b8a568fd703316d7a6345d8b31a4a8b953a74c05174e0be01b58b8def7c6e3d2d7373e9384f3abb3283724f54e3643827ef28ac6bd15dd923b1
+=======
+  checksum: 6a967f51c6550c2d4ded9c8dfa998a07449a459f74f4264984e421c0e881f3f4bcbc046497b9b2d0f05ebd73a3ee235685a2daa8cd7e19beb50051ea4e74df14
+>>>>>>> Stashed changes
   languageName: node
   linkType: hard
 
@@ -21005,10 +21523,26 @@ xnft@latest:
   languageName: node
   linkType: hard
 
+<<<<<<< Updated upstream
 "zustand@npm:^4.0.0-rc.2":
   version: 4.4.1
   resolution: "zustand@npm:4.4.1"
   dependencies:
+=======
+"zrender@npm:5.4.4":
+  version: 5.4.4
+  resolution: "zrender@npm:5.4.4"
+  dependencies:
+    tslib: 2.3.0
+  checksum: 4b317346af8eca38e62ba029239c3a13e97eac4fa15b3ddadbae23442d8b373f0e937c255dee8080d6bb2fc79c9da54f1106415586ed8942bd8bc684b3890ea9
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.0.0-rc.2":
+  version: 4.4.1
+  resolution: "zustand@npm:4.4.1"
+  dependencies:
+>>>>>>> Stashed changes
     use-sync-external-store: 1.2.0
   peerDependencies:
     "@types/react": ">=16.8"

@@ -37,13 +37,26 @@ export function ExamplesScreens() {
 
   console.log(balance);
   return (
+<<<<<<< Updated upstream
 		<Screen>
 
 			{window.xnft.solana && (
 				<Text style={tw`text-center`}>
+=======
+		<Screen
+		style={
+			{
+				backgroundColor: '#161b1f',
+			}
+		}
+		>
+			{window.xnft.solana && (
+				<Text style={tw`text-center text-white mb-3`}>
+>>>>>>> Stashed changes
 					SOL Balance: {(balance || 0).toLocaleString()}
 				</Text>
 			)}
+
 			<view className="text-center" style={{ alignContent: 'center' }}>
 				<view className="flex flex-col items-center justify-between md:flex-row">
 					<view className="mx-5 my-5 mb-5 md:mb-0">

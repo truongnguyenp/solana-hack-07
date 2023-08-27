@@ -150,6 +150,16 @@ window.Buffer = Buffer;
                         flexDirection: "row",
                         justifyContent: "space-between",
                         alignItems: "center",
+<<<<<<< Updated upstream
+=======
+                        gap: "10",
+                        backgroundColor: "#23282d",
+                        paddingRight: "16px",
+                        paddingLeft: "16px",
+                        paddingTop: "8px",
+                        paddingBottom: "8px",
+                        borderRadius: "8px",
+>>>>>>> Stashed changes
                     }}
                 >
                     <view
@@ -160,17 +170,27 @@ window.Buffer = Buffer;
                             marginRight: "5px",
                         }}
                     >
+<<<<<<< Updated upstream
                         <p>Long Pool:</p>
                         <p>Short Pool:</p>
                         <p>Long Odds:</p>
                         <p>Short Odds:</p>
                         <p>Starts In:</p>
+=======
+                        {/* A long, B short */}
+                        <Text style={{ color: "#858f9c", marginTop: "4px", marginBottom: "4px" }}>Team A Pool:</Text>
+                        <Text style={{ color: "#858f9c", marginTop: "4px", marginBottom: "4px" }}>Team B Pool:</Text>
+                        <Text style={{ color: "#858f9c", marginTop: "4px", marginBottom: "4px" }}>Team A Odds:</Text>
+                        <Text style={{ color: "#858f9c", marginTop: "4px", marginBottom: "4px" }}>Team B Odds:</Text>
+                        <Text style={{ color: "#858f9c", marginTop: "4px", marginBottom: "4px" }}>Starts In:</Text>
+>>>>>>> Stashed changes
                     </view>
                     <view
                         style={{
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "flex-end",
+<<<<<<< Updated upstream
                             marginLeft: "5px",
                         }}
                     >
@@ -192,6 +212,33 @@ window.Buffer = Buffer;
                 </view>
                 <view style={{marginTop:'20px'}}>
                    <PlacePositionBox pubkey={pariObj? pariObj.pubkey : 'Loading'}/>
+=======
+                            marginLeft: 5,
+    
+                        }}
+                    >
+                        <Text style={{ fontWeight: "600", color: "#e7e8ee", marginTop: "4px", marginBottom: "4px"}}>
+                            {pariObj ? pariObj.longPool : "0"}
+                        </Text>
+                        <Text style={{ fontWeight: "600", color: "#e7e8ee", marginTop: "4px", marginBottom: "4px"}}>
+                            {pariObj ? pariObj.shortPool : "0"}
+                        </Text>
+                        <Text style={{ fontWeight: "600", color: "#e7e8ee", marginTop: "4px", marginBottom: "4px"}}>
+                            {pariObj ? pariObj.longOdds : "0"}
+                        </Text>
+                        <Text style={{ fontWeight: "600", color: "#e7e8ee", marginTop: "4px", marginBottom: "4px"}}>
+                            {pariObj ? pariObj.shortOdds : "0"}
+                        </Text>
+                        <Text style={{ fontWeight: "600", color: "#e7e8ee", marginTop: "4px", marginBottom: "4px"}}>
+                            {countDownTime}
+                        </Text>
+                    </view>
+                </view>
+
+                <view style={{marginTop:'40px'}}>
+                    <Text style={{ color: "#848995", marginTop: "30px", marginBottom: "4px", marginRight: "16px", marginLeft: "16px"}}>Amount</Text>
+                    <PlacePositionBox pubkey={pariObj? pariObj.pubkey : 'Loading'}/>
+>>>>>>> Stashed changes
                 </view>
             </view>
         </view>

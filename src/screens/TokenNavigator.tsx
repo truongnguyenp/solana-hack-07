@@ -394,7 +394,21 @@ export const TokenListNavigator = () => {
         name="Detail"
         component={Detail}
        
+<<<<<<< Updated upstream
         options={{ title: "Token Detail" }}
+=======
+        options={{ 
+          title: "Predicting game detail", 
+          headerStyle: {
+            backgroundColor: "#161723",
+          },
+          headerTitleStyle: {
+            color: "white",
+            // Add other title style properties as needed
+          },
+          headerTintColor: "white",  
+        }}
+>>>>>>> Stashed changes
       />
     </Stack.Navigator>
   );

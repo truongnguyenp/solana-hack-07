@@ -1,10 +1,29 @@
+<<<<<<< Updated upstream
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { PublicKey } from '@solana/web3.js';
 import { FC, useCallback, useEffect } from 'react';
 import { ParimutuelWeb3, PositionSideEnum, WalletSigner } from '@hxronetwork/parimutuelsdk';
 import { PariConfig } from './Config';
 import { notify } from '../../utils/notifications';
+=======
+import {
+	Keypair,
+	Connection,
+} from '@solana/web3.js';
+import { FC } from 'react';
+import {
+	ParimutuelWeb3,
+	PositionSideEnum,
+	DEV_CONFIG,
+  MarketPairEnum,
+  getMarketPubkeys,
+} from '@hxronetwork/parimutuelsdk';
+
+// import { View } from 'react-native';
+
+>>>>>>> Stashed changes
 import { View } from 'react-native';
+
 import { Button, Text } from '@rneui/base';
 import tw from 'twrnc';
 
@@ -54,7 +73,11 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
       : 'bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-yellow-500 hover:to-pink-500';
 
 
+	const buttonTitle =
+		side === PositionSideEnum.LONG ? 'Team A Win' : 'Team B Win';
+
     return (
+<<<<<<< Updated upstream
         <View>
             <View
                 style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
@@ -74,6 +97,47 @@ const PlacePosition: FC<{pariPubkey: string, side: PositionSideEnum, amount: str
             </View>
         </View>
     );
+=======
+			// <View style={{ borderRadius: 80 }}>
+			// 	<Button
+			// 		title={side === PositionSideEnum.LONG ? 'Team A Win' : 'Team B Win'}
+					
+			// 		color={side === PositionSideEnum.LONG ? 'green' : 'orange'}
+					
+			// 		onPress={() => placePosition()}
+			// 	>
+			// 		<View
+			// 			style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass} ...`}
+			// 		>
+					
+			// 			{/* <Text style={tw`block text-white`}>Predict team A win with</Text>
+			// 			<Text style={tw`block group-disabled:hidden text-white`}>{amount} USDC</Text> */}
+
+			// 			<Text style={tw`block text-white`}>Predict team A win with</Text>
+			// 			<Text style={tw`block group-disabled:hidden text-white`}>{amount} USDC</Text>
+			// 		</View>
+			// 	</Button>
+			// </View>
+
+			<View style={{ borderRadius: "20px", width: "140px", }}>
+				<Button
+					title={side === PositionSideEnum.LONG ? 'Team A Win' : 'Team B Win'}
+					color={side === PositionSideEnum.LONG ? '#28cd93' : '#f56a6c'}
+					onPress={() => placePosition()}
+					style={tw`bg-gray-800 rounded-lg`}
+				>
+					<View style={tw`group w-60 m-2 btn disabled:animate-none bg-gradient-to-r ${bgGradientClass}`}>
+					
+					<Text style={tw`block text-white`}>
+					Predict {side === PositionSideEnum.LONG ? 'team A win' : 'team B win'} 
+					</Text>
+
+					<Text style={tw`block group-disabled:hidden text-white`}>with {amount} USDC</Text>
+					</View>
+				</Button>
+			</View>
+		);
+>>>>>>> Stashed changes
 };
 
 export default PlacePosition;

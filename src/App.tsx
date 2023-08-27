@@ -87,10 +87,12 @@ function TabNavigator() {
      
           headerTitleStyle: {
             color: "white",
+            
             // Add other title style properties as needed
           },
           tabBarStyle: {
             backgroundColor: '#161723',
+            borderTopWidth: 0,
             // Other tabBar style properties
           },
         }}
@@ -112,6 +114,7 @@ function TabNavigator() {
             },
             tabBarStyle: {
               backgroundColor: '#161723',
+              borderTopWidth: 0,
               // Other tabBar style properties
             },
             tabBarLabelStyle: {
